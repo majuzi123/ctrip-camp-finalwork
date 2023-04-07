@@ -10,7 +10,7 @@ export default function Index() {
   const [todoList, setTodoList] = useState([]);
 
   useLoad(() => {
-    setTodoList(Taro.getStorageSync('todoList') || {});
+    setTodoList(Taro.getStorageSync('todoList') || []);
   })
 
   const onInputTodo = (e) => {
@@ -37,6 +37,7 @@ export default function Index() {
       setTodo('')
       updateTodoList(newList)
     }
+    // debugger;
   }
 
   const onClickDelete = (index) => {
@@ -49,7 +50,6 @@ export default function Index() {
     const newList = [...todoList]
     newList[index].completedFlag = !newList[index].completedFlag
 
-    //排序，未做完的在上方，做完的沉到下面
     var temp = newList[index]
     newList.splice(index, 1)
     var idx = 0
@@ -81,7 +81,8 @@ export default function Index() {
       <Button className='todo-add' onClick={onClickAdd}>添加</Button>
       {todoList.length == 0 ? null : <Text className='todo-title'>TodoList</Text>}
       <View className='todo-box'>
-        {todoList.map((item, index) => (
+        {/* {console.log(todoList)} */}
+        {Array.isArray(todoList) ? todoList.map((item, index) => (
           <View className='todo-item' key={index}>
             <View className={classnames('item-isdo', { done: item.completedFlag })} onClick={(e) => onClickCheck(index)}></View>
             <Text className='item-text'>{item.content}</Text>
@@ -91,7 +92,7 @@ export default function Index() {
             </View>
             <Button className='item-del' onClick={() => onClickDelete(index)}>删除</Button>
           </View>
-        ))}
+        )) : null}
       </View>
       <Text>Hello</Text>
     </View>
