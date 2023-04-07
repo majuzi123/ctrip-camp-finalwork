@@ -75,8 +75,16 @@ export default function Index() {
     updateTodoList(newList)
   }
 
+  const pages = ['hotel-list', 'comment-list', 'comment-submit', 'comment-review']
+
   return (
+
     <View className='todo-page'>
+      <View>
+        {Array.isArray(pages) ? pages.map((item) => (
+          <Button onClick={() => Taro.navigateTo({ url: '../' + item + '/index' })}>{item}页面</Button>
+        )) : null}
+      </View>
       <Input className='todo-input' value={todo} onInput={onInputTodo}></Input>
       <Button className='todo-add' onClick={onClickAdd}>添加</Button>
       {todoList.length == 0 ? null : <Text className='todo-title'>TodoList</Text>}
