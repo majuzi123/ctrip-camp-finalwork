@@ -1,0 +1,91 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/hotel-list/index.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.hotal-list-page {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/HotelCard/index.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.hotel-card {
+  width: 98%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 400rpx;
+  margin: 8rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  background-color: white;
+}
+.hotel-card .card-left {
+  width: 33%;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.hotel-card .card-right {
+  width: 66%;
+  padding: 20rpx;
+  padding-top: 12rpx;
+  display: block;
+  position: relative;
+}
+.hotel-card .card-right .hotel-name {
+  max-height: 120rpx;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  font-size: 44rpx;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.hotel-card .card-right .comment {
+  margin: 10rpx;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hotel-card .card-right .comment .comment-score {
+  height: 100%;
+  font-size: 40rpx;
+  color: red;
+}
+.hotel-card .card-right .comment .comment-num {
+  height: 100%;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+.hotel-card .card-right .location {
+  font-size: 30rpx;
+  color: gray;
+}
+.hotel-card .card-right .comment-content {
+  font-size: 30rpx;
+  color: blueviolet;
+  margin: 10rpx 0;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.hotel-card .card-right .hotel-price {
+  font-size: 30rpx;
+  width: 100%;
+  color: violet;
+  text-align: right;
+  position: absolute;
+  bottom: 10rpx;
+  right: 20rpx;
+}
+.hotel-card .card-right .hotel-price .cost {
+  font-size: 60rpx;
+}

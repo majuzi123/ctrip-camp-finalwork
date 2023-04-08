@@ -1,0 +1,88 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/index/index.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.todo-page {
+  height: 100%;
+  width: 100%;
+  padding: 20rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.todo-page .todo-input {
+  height: 90rpx;
+  border: 1rpx solid #0086f6;
+  border-radius: 15rpx;
+  padding: 0 20rpx;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.todo-page .todo-input .weui-input {
+  height: 100%;
+}
+.todo-page .todo-add {
+  background: #0086f6;
+  color: #fff;
+  margin-top: 30rpx;
+}
+.todo-page .todo-title {
+  margin-top: 20rpx;
+  display: block;
+  width: 100%;
+  font-size: 40rpx;
+  color: #99f;
+  font-weight: 1000;
+  line-height: 80rpx;
+}
+.todo-page .todo-box {
+  padding: 0 30rpx;
+}
+.todo-page .todo-box .todo-item {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #ccc;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.todo-page .todo-box .todo-item .item-isdo {
+  height: 50rpx;
+  width: 50rpx;
+  border: #333 solid 3rpx;
+  border-radius: 25rpx;
+}
+.todo-page .todo-box .todo-item .done {
+  background-color: yellow;
+}
+.todo-page .todo-box .todo-item .item-text {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 20rpx;
+  margin-left: 10rpx;
+}
+.todo-page .todo-box .todo-item .item-del {
+  width: 100rpx;
+  font-size: 24rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0;
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff0000;
+  border: 0.5rpx solid #ff0000;
+}
+.todo-page .todo-box .todo-item .item-icon {
+  margin-right: 10rpx;
+  position: relative;
+}
+.icon-flag:before {
+  font-family: "iconfont";
+  content: "\ec3f";
+  font-size: 24rpx;
+  line-height: 50rpx;
+}
