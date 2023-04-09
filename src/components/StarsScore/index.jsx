@@ -2,6 +2,7 @@ import { View, Image, Text } from '@tarojs/components'
 import { useState } from 'react'
 import './index.scss'
 import IconFont from '../iconfont';
+// {/* This is a component shows the scores in form of stars, a part of HotelCard componet. */}
 export default function StarsScore({
     score,
     starSize

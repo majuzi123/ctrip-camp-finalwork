@@ -174,6 +174,8 @@ function Index() {
 
 
 
+// {/* This is a hotel card, component of hotel list page. */}
+
 
 function HotelCard(_ref) {
   var hotelDetails = _ref.hotelDetails;
@@ -239,6 +241,7 @@ function HotelCard(_ref) {
 
 
 
+// {/* This is a component shows the scores in form of stars, a part of HotelCard componet. */}
 
 
 function StarsScore(_ref) {
