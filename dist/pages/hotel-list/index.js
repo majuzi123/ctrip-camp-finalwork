@@ -30,7 +30,7 @@ function Index() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
       hotelId: "0001",
       name: "上海虹桥国展地铁站@酒店",
-      imageSrc: "https://pic.imgdb.cn/item/64313fb20d2dde57777fc6a9.png",
+      imageSrc: "https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg",
       price: 172,
       commentContent: "去虹桥机场和火车站很方便。去虹桥机场和火车站很方便。去虹桥机场和火车站很方便。去虹桥机场和火车站很方便。",
       commentNum: 10,
@@ -39,7 +39,7 @@ function Index() {
     }, {
       hotelId: "0002",
       name: "上海携程枚举酒店上海携程枚举酒店上海携程枚举酒店上海携程枚举酒店上海携程枚举酒店",
-      imageSrc: "https://pic.imgdb.cn/item/64313fb20d2dde57777fc6a9.png",
+      imageSrc: "https://pic.imgdb.cn/item/6432686f0d2dde577723c135.jpg",
       price: 11450,
       commentContent: "环境优美卫生整洁。",
       commentScore: 4.8,
@@ -48,7 +48,7 @@ function Index() {
     }, {
       hotelId: "0001",
       name: "上海虹桥国展地铁站@酒店",
-      imageSrc: "https://pic.imgdb.cn/item/64313fb20d2dde57777fc6a9.png",
+      imageSrc: "https://pic.imgdb.cn/item/6432686f0d2dde577723c135.jpg",
       price: 99,
       commentContent: "去虹桥机场和火车站很方便。",
       commentNum: 10,
@@ -57,7 +57,7 @@ function Index() {
     }, {
       hotelId: "0002",
       name: "上海携程枚举酒店",
-      imageSrc: "https://pic.imgdb.cn/item/64313fb20d2dde57777fc6a9.png",
+      imageSrc: "https://pic.imgdb.cn/item/6432686f0d2dde577723c135.jpg",
       price: 1145,
       commentContent: "环境优美卫生整洁。",
       commentScore: 5.0,
@@ -66,7 +66,7 @@ function Index() {
     }, {
       hotelId: "0001",
       name: "上海虹桥国展地铁站@酒店",
-      imageSrc: "https://pic.imgdb.cn/item/64313fb20d2dde57777fc6a9.png",
+      imageSrc: "https://pic.imgdb.cn/item/6432686f0d2dde577723c135.jpg",
       price: 172,
       commentContent: "去虹桥机场和火车站很方便。",
       commentNum: 10,
@@ -75,7 +75,7 @@ function Index() {
     }, {
       hotelId: "0002",
       name: "上海携程枚举酒店",
-      imageSrc: "https://pic.imgdb.cn/item/64313fb20d2dde57777fc6a9.png",
+      imageSrc: "https://pic.imgdb.cn/item/6432686f0d2dde577723c135.jpg",
       price: 400,
       commentContent: "环境优美卫生整洁。",
       commentScore: 4.8,
@@ -84,7 +84,7 @@ function Index() {
     }, {
       hotelId: "0001",
       name: "上海虹桥国展地铁站@酒店",
-      imageSrc: "https://pic.imgdb.cn/item/64313fb20d2dde57777fc6a9.png",
+      imageSrc: "https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg",
       price: 172,
       commentContent: "去虹桥机场和火车站很方便。",
       commentNum: 10,
@@ -93,7 +93,7 @@ function Index() {
     }, {
       hotelId: "0002",
       name: "上海携程枚举酒店",
-      imageSrc: "https://pic.imgdb.cn/item/64313fb20d2dde57777fc6a9.png",
+      imageSrc: "https://pic.imgdb.cn/item/6432689c0d2dde577723f9e6.jpg",
       price: 400,
       commentContent: "环境优美卫生整洁。",
       commentScore: 1.3,
@@ -102,7 +102,7 @@ function Index() {
     }, {
       hotelId: "0001",
       name: "上海虹桥国展地铁站@酒店",
-      imageSrc: "https://pic.imgdb.cn/item/64313fb20d2dde57777fc6a9.png",
+      imageSrc: "https://pic.imgdb.cn/item/6432689c0d2dde577723f9e6.jpg",
       price: 172,
       commentContent: "去虹桥机场和火车站很方便。",
       commentNum: 10,
@@ -111,7 +111,7 @@ function Index() {
     }, {
       hotelId: "0002",
       name: "上海携程枚举酒店",
-      imageSrc: "https://pic.imgdb.cn/item/64313fb20d2dde57777fc6a9.png",
+      imageSrc: "https://pic.imgdb.cn/item/6432689c0d2dde577723f9e6.jpg",
       price: 400,
       commentContent: "环境优美卫生整洁。",
       commentScore: 4.8,
@@ -120,7 +120,7 @@ function Index() {
     }, {
       hotelId: "0001",
       name: "上海虹桥国展地铁站@酒店",
-      imageSrc: "https://pic.imgdb.cn/item/64313fb20d2dde57777fc6a9.png",
+      imageSrc: "https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg",
       price: 172,
       commentContent: "去虹桥机场和火车站很方便。",
       commentNum: 10,
@@ -129,7 +129,7 @@ function Index() {
     }, {
       hotelId: "0002",
       name: "上海携程枚举酒店",
-      imageSrc: "https://pic.imgdb.cn/item/64313fb20d2dde57777fc6a9.png",
+      imageSrc: "https://pic.imgdb.cn/item/6432689c0d2dde577723f9e6.jpg",
       price: 400,
       commentContent: "环境优美卫生整洁。",
       commentScore: 4.8,

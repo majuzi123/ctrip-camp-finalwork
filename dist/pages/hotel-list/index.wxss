@@ -23,6 +23,10 @@
   border-radius: 10rpx;
   overflow: hidden;
 }
+.hotel-card .card-left .hotel-image {
+  height: 100%;
+  width: 100%;
+}
 .hotel-card .card-right {
   width: 66%;
   padding: 20rpx;
