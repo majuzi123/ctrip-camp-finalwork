@@ -15,7 +15,7 @@ export default function HotelCard({
                 <View className='hotel-name'>{hotelDetails.name}</View>
                 <View className='comment'>
                     <StarsScore score={hotelDetails.commentScore}></StarsScore>
-                    <Text className='comment-score'>{hotelDetails.commentScore}分</Text>
+                    <Text className='comment-score'>{hotelDetails.commentScore.toFixed(1)}分</Text>
                     <Text className='comment-num'>{hotelDetails.commentNum}点评</Text>
                 </View>
                 <View className='location'>{hotelDetails.location}</View>

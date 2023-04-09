@@ -1,8 +1,10 @@
 {
   "miniprogramRoot": "./",
-  "projectname": "xiecheng-final-work",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "projectname": "xiechengdemo",
   "description": "xiecheng-final-work",
   "appid": "wxec56979112c24ee2",
+  "compileType": "miniprogram",
   "setting": {
     "urlCheck": true,
     "es6": false,
@@ -41,8 +43,6 @@
     "useCompilerPlugins": false,
     "minifyWXML": true
   },
-  "compileType": "miniprogram",
-  "cloudfunctionRoot": "cloudfunctions/",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
@@ -58,13 +58,7 @@
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "id": -1,
-          "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide"
-        }
-      ]
+      "list": []
     }
   }
 }

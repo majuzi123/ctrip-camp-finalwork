@@ -15,8 +15,12 @@ export default function Index() {
   //   console.log(res.data);
   // })
 
-  useLoad(() => {
+  useLoad(async () => {
     setTodoList(Taro.getStorageSync('todoList') || []);
+    const data = await Taro.cloud.callFunction({
+      name: 'test'
+    })
+    console.log(data)
   })
 
   const onInputTodo = (e) => {
