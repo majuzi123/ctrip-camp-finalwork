@@ -1,13 +1,19 @@
-import { Component, useState } from 'react'
+import { Component, useState, useEffect } from 'react'
 import { View, Text, Input, Button, Checkbox, Icon } from '@tarojs/components'
 import Taro, { useLoad } from '@tarojs/taro';
 import classnames from 'classnames'
 import './index.scss'
 import FlagSelector from '../../components/flagSelector';
-
+// import { db } from '../../utils/cloudDB';
 export default function Index() {
   const [todo, setTodo] = useState('');
   const [todoList, setTodoList] = useState([]);
+  // var dbTest = 0;
+
+  // const db = Taro.cloud.database()
+  // db.collection('hotel').get().then(res => {
+  //   console.log(res.data);
+  // })
 
   useLoad(() => {
     setTodoList(Taro.getStorageSync('todoList') || []);
@@ -102,7 +108,7 @@ export default function Index() {
           </View>
         )) : null}
       </View>
-      <Text>Hello</Text>
+      <Text></Text>
     </View>
   )
 

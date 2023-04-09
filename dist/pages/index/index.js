@@ -30,6 +30,7 @@
 
 
 
+// import { db } from '../../utils/cloudDB';
 
 
 function Index() {
@@ -41,6 +42,13 @@ function Index() {
     _useState4 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_5__["default"])(_useState3, 2),
     todoList = _useState4[0],
     setTodoList = _useState4[1];
+  // var dbTest = 0;
+
+  // const db = Taro.cloud.database()
+  // db.collection('hotel').get().then(res => {
+  //   console.log(res.data);
+  // })
+
   (0,_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__.useLoad)(function () {
     setTodoList(_tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().getStorageSync('todoList') || []);
   });
@@ -164,9 +172,7 @@ function Index() {
           })]
         }, index);
       }) : null
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_7__.Text, {
-      children: "Hello"
-    })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_7__.Text, {})]
   });
 }
 

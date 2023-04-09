@@ -1,15 +1,19 @@
 import { Component } from 'react'
 import './app.scss'
+import Taro from '@tarojs/taro'
 
 class App extends Component {
 
-  componentDidMount () {}
+  componentDidMount() {
+    Taro.cloud.init({ env: 'cloud1-1gonnrsk77c5cd99' })
+    console.log("componentDidMount");
+  }
 
-  componentDidShow () {}
+  componentDidShow() { }
 
-  componentDidHide () {}
+  componentDidHide() { }
 
-  render () {
+  render() {
     // this.props.children 是将要会渲染的页面
     return this.props.children
   }

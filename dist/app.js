@@ -25,12 +25,15 @@ require("./runtime");
   \*****************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ "./node_modules/@babel/runtime/helpers/esm/createSuper.js");
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ "./node_modules/@babel/runtime/helpers/esm/createSuper.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "webpack/container/remote/react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @tarojs/taro */ "webpack/container/remote/@tarojs/taro");
+/* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 
@@ -38,15 +41,20 @@ require("./runtime");
 
 
 var App = /*#__PURE__*/function (_Component) {
-  (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_1__["default"])(App, _Component);
-  var _super = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(App);
+  (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_2__["default"])(App, _Component);
+  var _super = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(App);
   function App() {
-    (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_3__["default"])(this, App);
+    (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_4__["default"])(this, App);
     return _super.apply(this, arguments);
   }
-  (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_4__["default"])(App, [{
+  (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_demo_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_5__["default"])(App, [{
     key: "componentDidMount",
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.init({
+        env: 'cloud1-1gonnrsk77c5cd99'
+      });
+      console.log("componentDidMount");
+    }
   }, {
     key: "componentDidShow",
     value: function componentDidShow() {}
