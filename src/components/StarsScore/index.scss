@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    position: relative;
+    width: 40%;
+    align-items: center;
+
+    .back {
+        display: flex;
+        position: absolute;
+    }
+
+    .front {
+        display: flex;
+        position: absolute;
+    }
+}

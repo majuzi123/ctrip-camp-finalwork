@@ -1,6 +1,7 @@
 import { View, Image, Text } from '@tarojs/components'
 import { useState } from 'react'
 import './index.scss'
+import StarsScore from '../../components/StarsScore';
 export default function HotelCard({
     hotelDetails
 }) {
@@ -13,6 +14,7 @@ export default function HotelCard({
             <View className='card-right'>
                 <View className='hotel-name'>{hotelDetails.name}</View>
                 <View className='comment'>
+                    <StarsScore score={hotelDetails.commentScore}></StarsScore>
                     <Text className='comment-score'>{hotelDetails.commentScore}分</Text>
                     <Text className='comment-num'>{hotelDetails.commentNum}点评</Text>
                 </View>
