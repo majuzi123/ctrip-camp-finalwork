@@ -205,7 +205,6 @@
 /******/ 				"webpack/container/remote/@tarojs/runtime",
 /******/ 				"webpack/container/remote/@tarojs/taro",
 /******/ 				"webpack/container/remote/react",
-/******/ 				"webpack/container/remote/classnames",
 /******/ 				"webpack/container/remote/react/jsx-runtime"
 /******/ 			]
 /******/ 		};
@@ -238,11 +237,6 @@
 /******/ 			"webpack/container/remote/react": [
 /******/ 				"default",
 /******/ 				"./react",
-/******/ 				null
-/******/ 			],
-/******/ 			"webpack/container/remote/classnames": [
-/******/ 				"default",
-/******/ 				"./classnames",
 /******/ 				null
 /******/ 			],
 /******/ 			"webpack/container/remote/react/jsx-runtime": [

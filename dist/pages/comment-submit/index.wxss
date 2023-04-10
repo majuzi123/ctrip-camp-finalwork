@@ -1,4 +1,64 @@
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/comment-submit/index.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************************************************************/
-
+.comment-submit-page {
+  margin: 20rpx 60rpx;
+  color: #666;
+}
+.comment-submit-page .hotel-name {
+  width: 100%;
+  font-size: 48rpx;
+  color: rgb(47, 45, 90);
+  margin-bottom: 30rpx;
+}
+.comment-submit-page .comment-score {
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 48rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.comment-submit-page .comment-score .stars {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.comment-submit-page .comment-text {
+  position: relative;
+  margin-bottom: 30rpx;
+  padding: 10rpx 20rpx;
+  height: 300rpx;
+  overflow: scroll;
+  border: 1rpx solid #ccc;
+  border-radius: 30rpx;
+}
+.comment-submit-page .comment-text .text-content {
+  color: #333;
+}
+.comment-submit-page .comment-text .text-tips1 {
+  position: absolute;
+  left: 20rpx;
+  top: 10rpx;
+}
+.comment-submit-page .comment-text .text-tips2 {
+  position: absolute;
+  bottom: 10rpx;
+  right: 20rpx;
+  font-size: smaller;
+}
+.comment-submit-page .comment-imgs {
+  display: inline;
+  margin-bottom: 30rpx;
+}
+.comment-submit-page .comment-imgs .comment-img {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 5rpx 16rpx;
+}
+.comment-submit-page .submit-btn {
+  margin-bottom: 30rpx;
+}
