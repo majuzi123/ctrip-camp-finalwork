@@ -10,10 +10,12 @@
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ Index; }
 /* harmony export */ });
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js */ "./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js");
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "webpack/container/remote/react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
+/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
 /* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @tarojs/taro */ "webpack/container/remote/@tarojs/taro");
 /* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_HotelCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/HotelCard */ "./src/components/HotelCard/index.jsx");
@@ -26,123 +28,46 @@
 
 
 
+
+
 function Index() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
-      hotelId: "0001",
-      name: "上海虹桥国展地铁站@酒店",
-      imageSrc: "https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg",
-      price: 172,
-      commentContent: "去虹桥机场和火车站很方便。去虹桥机场和火车站很方便。去虹桥机场和火车站很方便。去虹桥机场和火车站很方便。",
-      commentNum: 10,
-      commentScore: 4.0,
-      location: "近淞虹路地铁站·虹桥"
-    }, {
-      hotelId: "0002",
-      name: "上海携程枚举酒店上海携程枚举酒店上海携程枚举酒店上海携程枚举酒店上海携程枚举酒店",
-      imageSrc: "https://pic.imgdb.cn/item/6432686f0d2dde577723c135.jpg",
-      price: 11450,
-      commentContent: "环境优美卫生整洁。",
-      commentScore: 4.8,
-      commentNum: 26,
-      location: "近淞虹路地铁站·虹桥"
-    }, {
-      hotelId: "0001",
-      name: "上海虹桥国展地铁站@酒店",
-      imageSrc: "https://pic.imgdb.cn/item/6432686f0d2dde577723c135.jpg",
-      price: 99,
-      commentContent: "去虹桥机场和火车站很方便。",
-      commentNum: 10,
-      commentScore: 4.5,
-      location: "近淞虹路地铁站·虹桥"
-    }, {
-      hotelId: "0002",
-      name: "上海携程枚举酒店",
-      imageSrc: "https://pic.imgdb.cn/item/6432686f0d2dde577723c135.jpg",
-      price: 1145,
-      commentContent: "环境优美卫生整洁。",
-      commentScore: 5.0,
-      commentNum: 26,
-      location: "近淞虹路地铁站·虹桥"
-    }, {
-      hotelId: "0001",
-      name: "上海虹桥国展地铁站@酒店",
-      imageSrc: "https://pic.imgdb.cn/item/6432686f0d2dde577723c135.jpg",
-      price: 172,
-      commentContent: "去虹桥机场和火车站很方便。",
-      commentNum: 10,
-      commentScore: 3.2,
-      location: "近淞虹路地铁站·虹桥"
-    }, {
-      hotelId: "0002",
-      name: "上海携程枚举酒店",
-      imageSrc: "https://pic.imgdb.cn/item/6432686f0d2dde577723c135.jpg",
-      price: 400,
-      commentContent: "环境优美卫生整洁。",
-      commentScore: 4.8,
-      commentNum: 26,
-      location: "近淞虹路地铁站·虹桥"
-    }, {
-      hotelId: "0001",
-      name: "上海虹桥国展地铁站@酒店",
-      imageSrc: "https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg",
-      price: 172,
-      commentContent: "去虹桥机场和火车站很方便。",
-      commentNum: 10,
-      commentScore: 0,
-      location: "近淞虹路地铁站·虹桥"
-    }, {
-      hotelId: "0002",
-      name: "上海携程枚举酒店",
-      imageSrc: "https://pic.imgdb.cn/item/6432689c0d2dde577723f9e6.jpg",
-      price: 400,
-      commentContent: "环境优美卫生整洁。",
-      commentScore: 1.3,
-      commentNum: 26,
-      location: "近淞虹路地铁站·虹桥"
-    }, {
-      hotelId: "0001",
-      name: "上海虹桥国展地铁站@酒店",
-      imageSrc: "https://pic.imgdb.cn/item/6432689c0d2dde577723f9e6.jpg",
-      price: 172,
-      commentContent: "去虹桥机场和火车站很方便。",
-      commentNum: 10,
-      commentScore: 4.5,
-      location: "近淞虹路地铁站·虹桥"
-    }, {
-      hotelId: "0002",
-      name: "上海携程枚举酒店",
-      imageSrc: "https://pic.imgdb.cn/item/6432689c0d2dde577723f9e6.jpg",
-      price: 400,
-      commentContent: "环境优美卫生整洁。",
-      commentScore: 4.8,
-      commentNum: 26,
-      location: "近淞虹路地铁站·虹桥"
-    }, {
-      hotelId: "0001",
-      name: "上海虹桥国展地铁站@酒店",
-      imageSrc: "https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg",
-      price: 172,
-      commentContent: "去虹桥机场和火车站很方便。",
-      commentNum: 10,
-      commentScore: 4.5,
-      location: "近淞虹路地铁站·虹桥"
-    }, {
-      hotelId: "0002",
-      name: "上海携程枚举酒店",
-      imageSrc: "https://pic.imgdb.cn/item/6432689c0d2dde577723f9e6.jpg",
-      price: 400,
-      commentContent: "环境优美卫生整洁。",
-      commentScore: 4.8,
-      commentNum: 26,
-      location: "近淞虹路地铁站·虹桥"
-    }]),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState2 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_4__["default"])(_useState, 2),
     hotelsList = _useState2[0],
     setHotelList = _useState2[1];
-  // useLoad(() => {
-  // })
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_5__.View, {
+  //   hotel: {
+  //     "_id": "00001",
+  //     "name": "桔子酒店(上海大渡河路地铁站店)",
+  //     "image": "https://pic.imgdb.cn/item/643554db0d2dde5777c63b14.jpg",
+  //     "location": "长风公园地区|靠近大渡河路地铁站",
+  //     "price": 411.0,
+  //     "commentNum": 1229.0,
+  //     "comment": [
+  //         "酒店功能完备",
+  //         "酒店装修豪华"
+  //     ],
+  //     "score": 4.9
+  //   }
+  (0,_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__.useLoad)( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_5__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_6__["default"])().mark(function _callee() {
+    var hotels;
+    return (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_6__["default"])().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
+            name: 'get-hotel-list'
+          });
+        case 2:
+          hotels = _context.sent.result;
+          console.log(hotels);
+          setHotelList(hotels);
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  })));
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_7__.View, {
     className: "hotal-list-page",
     children: Array.isArray(hotelsList) && hotelsList.map(function (item) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_HotelCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -185,7 +110,7 @@ function HotelCard(_ref) {
       className: "card-left",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.Image, {
         className: "hotel-image",
-        src: hotelDetails.imageSrc
+        src: hotelDetails.image
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
       className: "card-right",
@@ -195,10 +120,10 @@ function HotelCard(_ref) {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
         className: "comment",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_StarsScore__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          score: hotelDetails.commentScore
+          score: hotelDetails.score
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.Text, {
           className: "comment-score",
-          children: [hotelDetails.commentScore.toFixed(1), "\u5206"]
+          children: [hotelDetails.score.toFixed(1), "\u5206"]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.Text, {
           className: "comment-num",
           children: [hotelDetails.commentNum, "\u70B9\u8BC4"]
@@ -208,7 +133,7 @@ function HotelCard(_ref) {
         children: hotelDetails.location
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
         className: "comment-content",
-        children: ["\"", hotelDetails.commentContent, "\""]
+        children: ["\"", hotelDetails.comment[Math.floor(Math.random() * hotelDetails.comment.length)], "\""]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
         className: "hotel-price",
         children: ["\uFFE5", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.Text, {

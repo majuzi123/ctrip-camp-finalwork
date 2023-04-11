@@ -33,12 +33,14 @@
   margin-bottom: 30rpx;
   padding: 10rpx 20rpx;
   height: 300rpx;
-  overflow: scroll;
   border: 1rpx solid #ccc;
   border-radius: 30rpx;
 }
 .comment-submit-page .comment-text .text-content {
   color: #333;
+  width: auto;
+  max-height: 260rpx;
+  overflow: scroll;
 }
 .comment-submit-page .comment-text .text-tips1 {
   position: absolute;

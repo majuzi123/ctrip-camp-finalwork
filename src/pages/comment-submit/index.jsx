@@ -1,5 +1,5 @@
 import { Component, useState } from 'react'
-import { View, Text, Input, Button, Checkbox, Image } from '@tarojs/components'
+import { View, Text, Input, Button, Checkbox, Image, Textarea } from '@tarojs/components'
 import Taro, { useLoad } from '@tarojs/taro';
 import classnames from 'classnames'
 import './index.scss'
@@ -103,7 +103,7 @@ export default function Index() {
 
       <View className='comment-text'>
         <Text className='text-tips1'>{cText == '' ? '欢迎你分享对酒店服务、环境、设施和价格等的评价...' : ''}</Text>
-        <Input className='text-content' value={cText} type='text' onInput={(e) => { setCText(e.target.value) }} />
+        <Textarea className='text-content' value={cText} type='text' onInput={(e) => { setCText(e.target.value) }} />
         <View className='text-tips2'>至少5个字</View>
       </View>
 

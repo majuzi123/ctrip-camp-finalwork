@@ -10,17 +10,17 @@ export default function HotelCard({
     return (
         <View className='hotel-card'>
             <View className='card-left'>
-                <Image className='hotel-image' src={hotelDetails.imageSrc}></Image>
+                <Image className='hotel-image' src={hotelDetails.image}></Image>
             </View>
             <View className='card-right'>
                 <View className='hotel-name'>{hotelDetails.name}</View>
                 <View className='comment'>
-                    <StarsScore score={hotelDetails.commentScore}></StarsScore>
-                    <Text className='comment-score'>{hotelDetails.commentScore.toFixed(1)}分</Text>
+                    <StarsScore score={hotelDetails.score}></StarsScore>
+                    <Text className='comment-score'>{hotelDetails.score.toFixed(1)}分</Text>
                     <Text className='comment-num'>{hotelDetails.commentNum}点评</Text>
                 </View>
                 <View className='location'>{hotelDetails.location}</View>
-                <View className='comment-content'>"{hotelDetails.commentContent}"</View>
+                <View className='comment-content'>"{hotelDetails.comment[Math.floor(Math.random() * hotelDetails.comment.length)]}"</View>
                 <View className='hotel-price'>￥<Text className='cost'>{hotelDetails.price}</Text>起</View>
             </View>
         </View>
