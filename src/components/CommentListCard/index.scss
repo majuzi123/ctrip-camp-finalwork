@@ -1,0 +1,138 @@
+.hotel-card {
+    width: 98%;
+    display: flex;
+    height: 400rpx;
+    margin: 8rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+    background-color: white;
+    .homeContainer {
+
+		//width: 750rpx;
+		background-color: #eeeeee;
+	}
+
+	.upperContent {
+		background-color: white;
+		padding-bottom: 1rpx;
+		margin: 20rpx 15rpx 10rpx 15rpx;
+		border-bottom-right-radius: 15rpx;
+		border-bottom-left-radius: 15rpx;
+	}
+
+	.footerContent {
+		margin: 5rpx 15rpx 0 15rpx;
+		height: 10rpx;
+		background-color: white;
+		height: max-content;
+	}
+
+	.opusDetailItem {
+		width: 730rpx;
+		margin: 15rpx 10rpx 5rpx 10rpx;
+		padding: 0rpx 15rpx;
+		display: flex;
+	}
+
+	.opusDetailItem2 {
+		width: 730rpx;
+		margin: 15rpx 10rpx 0 10rpx;
+		padding: 0rpx 15rpx;
+		display: flex;
+	}
+
+	.opusDetailItem image {
+		/* padding-top: 15rpx; */
+		margin-top: 20rpx;
+		width: 100rpx;
+		height: 100rpx;
+		border-radius: 50%;
+	}
+
+	.opusDetailItem2 image {
+		padding-top: 15rpx;
+		width: 80rpx;
+	}
+
+	.opusDetailButton {
+		margin-left: 300rpx;
+		margin-top: 40rpx;
+		align-items: center;
+		height: 52rpx;
+		width: 120rpx;
+		font-size: 20rpx;
+		background-color: transparent;
+		color: #ffcc00;
+		border: 2rpx solid #ffcc00;
+		border-radius: 15rpx;
+	}
+    .rowItem{
+        display: flex;
+        .starImage{
+         margin-left: 20rpx;
+         margin-top: 20rpx; 
+         width: 50rpx;
+		 height: 50rpx;
+		 border-radius: 50%;
+        }
+    }
+    .columnItem{
+        display: flex;
+        flex-direction: column;
+        .liveTime{
+            font-size: 25rpx;
+            color: gray;
+        }
+    }
+    .userInfo{
+        display: flex;
+        flex-direction: row;
+    }
+	.opusDetailTitle {
+		width: 200rpx;
+		line-height: 80rpx;
+		overflow: hidden;
+		white-space: nowrap;
+		margin-left: 15rpx;
+	}
+
+	.opusDetailTitle2 {
+		width: 60rpx;
+		line-height: 120rpx;
+		overflow: hidden;
+		white-space: nowrap;
+		margin-left: 5rpx;
+		font-size: 25rpx;
+	}
+    .bodyTopic {
+		display: flex;
+		//margin: 5rpx 10rpx 5rpx 0;
+	}
+
+	.bodyTopicItem {
+		background-color: #eeeeee;
+		width: max-content;
+        height: 30rpx;
+        line-height: 20rpx;
+		// overflow: hidden;
+		//white-space: nowrap;
+        margin-top: 20rpx;
+		padding: 6rpx 8rpx 6rpx 8rpx;
+		border-radius: 10rpx;
+		margin-right: 10rpx;
+		font-size: 25rpx;
+	}
+
+    .card-left {
+        width: 33%;
+        border-radius: 10rpx;
+        overflow: hidden;
+
+        .hotel-image {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+   
+}
