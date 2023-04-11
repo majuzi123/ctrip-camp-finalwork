@@ -1,4 +1,153 @@
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/comment-list/index.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************/
-
+.hotal-list-page {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/CommentListCard/index.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.hotel-card {
+  width: 98%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 400rpx;
+  margin: 8rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  background-color: white;
+}
+.hotel-card .homeContainer {
+  background-color: #eeeeee;
+}
+.hotel-card .upperContent {
+  background-color: white;
+  padding-bottom: 1rpx;
+  margin: 20rpx 15rpx 10rpx 15rpx;
+  border-bottom-right-radius: 15rpx;
+  border-bottom-left-radius: 15rpx;
+}
+.hotel-card .footerContent {
+  margin: 5rpx 15rpx 0 15rpx;
+  height: 10rpx;
+  background-color: white;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.hotel-card .opusDetailItem {
+  width: 730rpx;
+  margin: 15rpx 10rpx 5rpx 10rpx;
+  padding: 0rpx 15rpx;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hotel-card .opusDetailItem2 {
+  width: 730rpx;
+  margin: 15rpx 10rpx 0 10rpx;
+  padding: 0rpx 15rpx;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hotel-card .opusDetailItem image {
+  /* padding-top: 15rpx; */
+  margin-top: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.hotel-card .opusDetailItem2 image {
+  padding-top: 15rpx;
+  width: 80rpx;
+}
+.hotel-card .opusDetailButton {
+  margin-left: 300rpx;
+  margin-top: 40rpx;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 52rpx;
+  width: 120rpx;
+  font-size: 20rpx;
+  background-color: transparent;
+  color: #ffcc00;
+  border: 2rpx solid #ffcc00;
+  border-radius: 15rpx;
+}
+.hotel-card .rowItem {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hotel-card .rowItem .starImage {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.hotel-card .columnItem {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.hotel-card .columnItem .liveTime {
+  font-size: 25rpx;
+  color: gray;
+}
+.hotel-card .userInfo {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.hotel-card .opusDetailTitle {
+  width: 200rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 15rpx;
+}
+.hotel-card .opusDetailTitle2 {
+  width: 60rpx;
+  line-height: 120rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 5rpx;
+  font-size: 25rpx;
+}
+.hotel-card .bodyTopic {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hotel-card .bodyTopicItem {
+  background-color: #eeeeee;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 30rpx;
+  line-height: 20rpx;
+  margin-top: 20rpx;
+  padding: 6rpx 8rpx 6rpx 8rpx;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+  font-size: 25rpx;
+}
+.hotel-card .card-left {
+  width: 33%;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.hotel-card .card-left .hotel-image {
+  height: 100%;
+  width: 100%;
+}

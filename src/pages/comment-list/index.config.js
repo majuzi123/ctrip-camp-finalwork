@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: '点评列表'
+  navigationBarTitleText: '上海虹桥国展地铁站@酒店'
 })
