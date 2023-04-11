@@ -46,6 +46,7 @@
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
+  font-weight: bolder;
 }
 .hotel-card .card-right .comment {
   margin: 10rpx;

@@ -41,7 +41,7 @@
 
 
 function Index() {
-  var hotelName = 'XXX酒店';
+  var hotelName = '上海虹桥国展地铁站@酒店';
   var hotelId = '00001';
   // useLoad(() => {
   //   hotelName = 'XXX酒店';
@@ -209,7 +209,7 @@ function Index() {
     className: "comment-submit-page",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
       className: "hotel-name",
-      children: "HelloHelloHelloHelloHello"
+      children: hotelName
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
       className: "comment-score",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.Text, {

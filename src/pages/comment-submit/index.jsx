@@ -7,7 +7,7 @@ import FlagSelector from '../../components/flagSelector';
 import IconFont from '../../components/iconfont';
 
 export default function Index() {
-  var hotelName = 'XXX酒店';
+  var hotelName = '上海虹桥国展地铁站@酒店';
   var hotelId = '00001';
   // useLoad(() => {
   //   hotelName = 'XXX酒店';
@@ -89,7 +89,7 @@ export default function Index() {
 
   return (
     <View className='comment-submit-page'>
-      <View className='hotel-name'>HelloHelloHelloHelloHello</View>
+      <View className='hotel-name'>{hotelName}</View>
 
       <View className='comment-score'>
         <Text className='score-title'>评分：</Text>
