@@ -2,9 +2,7 @@ const cloud = require('wx-server-sdk')
 cloud.init()
 
 exports.main = async () => {
-    const wxContext = await cloud.getWXContext()
-
-    return {
-        openid: wxContext.OPENID
-    }
+    const db = cloud.database()
+    var res = await db.collection('test').where({ _id: "0" }).get()
+    return res
 }

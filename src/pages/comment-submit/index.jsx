@@ -17,6 +17,34 @@ export default function Index() {
     'https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg',
     'https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg'
   ]);
+  const IMG_MAX_COUNT = 9;
+
+  const addImg = async () => {
+    console.log("addImg")
+    var imgs = [...cImgs]
+    const res = await Taro.chooseImage({ count: IMG_MAX_COUNT - cImgs.length, sizeType: ['compressed'] })
+    for (let path of res.tempFilePaths) {
+      imgs.push(path)
+    }
+    setCImgs(imgs)
+    console.log(res.tempFilePaths)
+    console.log(cImgs)
+  }
+  const deleteImg = (index) => {
+    console.log("deleteImg" + index)
+    var imgs = [...cImgs]
+    var newCImg = []
+    for (let i = 0; i < imgs.length; i++) {
+      if (i != index) {
+        newCImg.push(imgs[i])
+      }
+    }
+    setCImgs(newCImg)
+  }
+
+  const submitComment = () => {
+    console.log("submit")
+  }
 
   return (
     <View className='comment-submit-page'>
@@ -38,13 +66,18 @@ export default function Index() {
         <View className='text-tips2'>no less than 5 chars</View>
       </View>
 
-      <View className='comment-imgs'>{cImgs.map((src) => (
-        <Image src={src} className='comment-img'></Image>
+      <View className='comment-imgs'>{cImgs.map((src, index) => (
+        <View className='img-container'>
+          <Image src={src} className='comment-img'></Image>
+          <View className='delete-btn' onClick={() => { deleteImg(index) }}>
+            <IconFont name='times-circle-fill' size='32rpx' color='red'></IconFont>
+          </View>
+        </View>
       ))}
-        <Image src='https://pic.imgdb.cn/item/6432686f0d2dde577723c135.jpg' className='comment-img'></Image>
+        {cImgs.length < IMG_MAX_COUNT && <View className='img-container'><Image src='https://pic.imgdb.cn/item/6434ffef0d2dde577737f3bf.jpg' className='comment-img' onClick={addImg}></Image></View>}
       </View>
 
-      <Button className='submit-btn'>提交</Button>
+      <Button className='submit-btn' onClick={submitComment}>提交</Button>
     </View>
   )
 
