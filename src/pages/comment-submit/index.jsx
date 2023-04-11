@@ -7,16 +7,15 @@ import FlagSelector from '../../components/flagSelector';
 import IconFont from '../../components/iconfont';
 
 export default function Index() {
-
+  var hotelName = 'XXX酒店';
+  var hotelId = '00001';
   // useLoad(() => {
+  //   hotelName = 'XXX酒店';
+  //   hotelId = '00001'
   // })
   const [cScore, setCScore] = useState(0);
   const [cText, setCText] = useState('');
-  const [cImgs, setCImgs] = useState([
-    'https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg',
-    'https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg',
-    'https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg'
-  ]);
+  const [cImgs, setCImgs] = useState([]);
   const IMG_MAX_COUNT = 9;
 
   const addImg = async () => {
@@ -24,11 +23,14 @@ export default function Index() {
     var imgs = [...cImgs]
     const res = await Taro.chooseImage({ count: IMG_MAX_COUNT - cImgs.length, sizeType: ['compressed'] })
     for (let path of res.tempFilePaths) {
-      imgs.push(path)
+      let cloudPath = 'comment-img/' + Date.now() + Math.floor(Math.random() * 10000) + '.jpg';
+      await Taro.cloud.uploadFile({ cloudPath: cloudPath, filePath: path }).then(
+        (res) => {
+          imgs.push(res.fileID)
+        }
+      )
     }
     setCImgs(imgs)
-    console.log(res.tempFilePaths)
-    console.log(cImgs)
   }
   const deleteImg = (index) => {
     console.log("deleteImg" + index)
@@ -42,8 +44,47 @@ export default function Index() {
     setCImgs(newCImg)
   }
 
-  const submitComment = () => {
-    console.log("submit")
+  const submitComment = async () => {
+    console.log("clicked submit")
+    if (cScore == 0) {
+      Taro.showToast({ title: '请先评分', icon: 'error', duration: 1000 })
+      return;
+    }
+    if (cText.length < 5) {
+      Taro.showToast({ title: '评价字数过少', icon: 'error', duration: 1000 })
+      return;
+    }
+    Taro.showModal({
+      title: '确认提交评价？',
+      success: (res) => {
+        if (res.confirm) {
+          console.log("submit to server...")
+          Taro.showLoading({
+            title: '提交评价ing...'
+          })
+          Taro.cloud.callFunction({
+            name: 'submit-comment',
+            data: {
+              hotelName: hotelName,
+              hotelId: hotelId,
+              comment: {
+                score: cScore,
+                text: cText,
+                imgs: cImgs
+              }
+            }
+          }).then((res) => {
+            Taro.hideLoading()
+            if (res.errMsg != "cloud.callFunction:ok") {
+              Taro.showToast({ title: '提交失败', icon: 'error', duration: 1000 })
+            } else {
+              Taro.showToast({ title: '提交成功', icon: 'success', duration: 1000 })
+            }
+          })
+        }
+      }
+    })
+
   }
 
   return (
@@ -61,9 +102,9 @@ export default function Index() {
       </View>
 
       <View className='comment-text'>
-        <Text className='text-tips1'>{cText == '' ? 'please enter your comment...' : ''}</Text>
+        <Text className='text-tips1'>{cText == '' ? '欢迎你分享对酒店服务、环境、设施和价格等的评价...' : ''}</Text>
         <Input className='text-content' value={cText} type='text' onInput={(e) => { setCText(e.target.value) }} />
-        <View className='text-tips2'>no less than 5 chars</View>
+        <View className='text-tips2'>至少5个字</View>
       </View>
 
       <View className='comment-imgs'>{cImgs.map((src, index) => (
