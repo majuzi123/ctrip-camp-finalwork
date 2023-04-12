@@ -7,6 +7,7 @@
         font-size: 48rpx;
         color: rgb(47, 45, 90);
         margin-bottom: 30rpx;
+        font-weight: bolder;
     }
 
     .comment-score {
@@ -26,12 +27,14 @@
         margin-bottom: 30rpx;
         padding: 10rpx 20rpx;
         height: 300rpx;
-        overflow: scroll;
         border: 1rpx solid #ccc;
         border-radius: 30rpx;
 
         .text-content {
             color: #333;
+            width: auto;
+            max-height: 260rpx;
+            overflow: scroll;
         }
 
         .text-tips1 {

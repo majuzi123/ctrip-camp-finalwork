@@ -11,11 +11,11 @@
 /* harmony export */   "Button": function() { return /* binding */ Button; },
 /* harmony export */   "Icon": function() { return /* binding */ Icon; },
 /* harmony export */   "Image": function() { return /* binding */ Image; },
-/* harmony export */   "Input": function() { return /* binding */ Input; },
 /* harmony export */   "Text": function() { return /* binding */ Text; },
+/* harmony export */   "Textarea": function() { return /* binding */ Textarea; },
 /* harmony export */   "View": function() { return /* binding */ View; }
 /* harmony export */ });
-/* unused harmony exports Ad, AdCustom, Audio, Block, Camera, Canvas, ChannelLive, ChannelVideo, Checkbox, CheckboxGroup, CoverImage, CoverView, CustomWrapper, Editor, Form, FunctionalPageNavigator, KeyboardAccessory, Label, LivePlayer, LivePusher, Map, MatchMedia, MovableArea, MovableView, NativeSlot, NavigationBar, Navigator, OfficialAccount, OpenData, PageContainer, PageMeta, Picker, PickerView, PickerViewColumn, Progress, Radio, RadioGroup, RichText, RootPortal, ScrollView, ShareElement, Slider, Slot, Swiper, SwiperItem, Switch, Textarea, Video, VoipRoom, WebView */
+/* unused harmony exports Ad, AdCustom, Audio, Block, Camera, Canvas, ChannelLive, ChannelVideo, Checkbox, CheckboxGroup, CoverImage, CoverView, CustomWrapper, Editor, Form, FunctionalPageNavigator, Input, KeyboardAccessory, Label, LivePlayer, LivePusher, Map, MatchMedia, MovableArea, MovableView, NativeSlot, NavigationBar, Navigator, OfficialAccount, OpenData, PageContainer, PageMeta, Picker, PickerView, PickerViewColumn, Progress, Radio, RadioGroup, RichText, RootPortal, ScrollView, ShareElement, Slider, Slot, Swiper, SwiperItem, Switch, Video, VoipRoom, WebView */
 var View = 'view';
 var Icon = 'icon';
 var Progress = 'progress';

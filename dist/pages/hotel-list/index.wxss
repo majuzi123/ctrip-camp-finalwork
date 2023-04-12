@@ -46,6 +46,7 @@
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
+  font-weight: bolder;
 }
 .hotel-card .card-right .comment {
   margin: 10rpx;
@@ -70,6 +71,11 @@
 .hotel-card .card-right .location {
   font-size: 30rpx;
   color: gray;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 .hotel-card .card-right .comment-content {
   font-size: 30rpx;

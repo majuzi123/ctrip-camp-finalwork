@@ -41,7 +41,11 @@
 
 
 function Index() {
+  var hotelName = '上海虹桥国展地铁站@酒店';
+  var hotelId = '00001';
   // useLoad(() => {
+  //   hotelName = 'XXX酒店';
+  //   hotelId = '00001'
   // })
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
     _useState2 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState, 2),
@@ -51,14 +55,14 @@ function Index() {
     _useState4 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState3, 2),
     cText = _useState4[0],
     setCText = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(['https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg', 'https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg', 'https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg']),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState6 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState5, 2),
     cImgs = _useState6[0],
     setCImgs = _useState6[1];
   var IMG_MAX_COUNT = 9;
   var addImg = /*#__PURE__*/function () {
     var _ref = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee() {
-      var imgs, res, _iterator, _step, path;
+      var imgs, res, _iterator, _step, path, cloudPath;
       return (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
@@ -72,24 +76,43 @@ function Index() {
           case 4:
             res = _context.sent;
             _iterator = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_10__["default"])(res.tempFilePaths);
-            try {
-              for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                path = _step.value;
-                imgs.push(path);
-              }
-            } catch (err) {
-              _iterator.e(err);
-            } finally {
-              _iterator.f();
+            _context.prev = 6;
+            _iterator.s();
+          case 8:
+            if ((_step = _iterator.n()).done) {
+              _context.next = 15;
+              break;
             }
+            path = _step.value;
+            cloudPath = 'comment-img/' + Date.now() + Math.floor(Math.random() * 10000) + '.jpg';
+            _context.next = 13;
+            return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.uploadFile({
+              cloudPath: cloudPath,
+              filePath: path
+            }).then(function (res) {
+              imgs.push(res.fileID);
+            });
+          case 13:
+            _context.next = 8;
+            break;
+          case 15:
+            _context.next = 20;
+            break;
+          case 17:
+            _context.prev = 17;
+            _context.t0 = _context["catch"](6);
+            _iterator.e(_context.t0);
+          case 20:
+            _context.prev = 20;
+            _iterator.f();
+            return _context.finish(20);
+          case 23:
             setCImgs(imgs);
-            console.log(res.tempFilePaths);
-            console.log(cImgs);
-          case 10:
+          case 24:
           case "end":
             return _context.stop();
         }
-      }, _callee);
+      }, _callee, null, [[6, 17, 20, 23]]);
     }));
     return function addImg() {
       return _ref.apply(this, arguments);
@@ -106,14 +129,87 @@ function Index() {
     }
     setCImgs(newCImg);
   };
-  var submitComment = function submitComment() {
-    console.log("submit");
-  };
+  var submitComment = /*#__PURE__*/function () {
+    var _ref2 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee2() {
+      return (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().wrap(function _callee2$(_context2) {
+        while (1) switch (_context2.prev = _context2.next) {
+          case 0:
+            console.log("clicked submit");
+            if (!(cScore == 0)) {
+              _context2.next = 4;
+              break;
+            }
+            _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showToast({
+              title: '请先评分',
+              icon: 'error',
+              duration: 1000
+            });
+            return _context2.abrupt("return");
+          case 4:
+            if (!(cText.length < 5)) {
+              _context2.next = 7;
+              break;
+            }
+            _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showToast({
+              title: '评价字数过少',
+              icon: 'error',
+              duration: 1000
+            });
+            return _context2.abrupt("return");
+          case 7:
+            _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showModal({
+              title: '确认提交评价？',
+              success: function success(res) {
+                if (res.confirm) {
+                  console.log("submit to server...");
+                  _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showLoading({
+                    title: '提交评价ing...'
+                  });
+                  _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
+                    name: 'submit-comment',
+                    data: {
+                      hotelName: hotelName,
+                      hotelId: hotelId,
+                      comment: {
+                        score: cScore,
+                        text: cText,
+                        imgs: cImgs
+                      }
+                    }
+                  }).then(function (res) {
+                    _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().hideLoading();
+                    if (res.errMsg != "cloud.callFunction:ok") {
+                      _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showToast({
+                        title: '提交失败',
+                        icon: 'error',
+                        duration: 1000
+                      });
+                    } else {
+                      _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showToast({
+                        title: '提交成功',
+                        icon: 'success',
+                        duration: 1000
+                      });
+                    }
+                  });
+                }
+              }
+            });
+          case 8:
+          case "end":
+            return _context2.stop();
+        }
+      }, _callee2);
+    }));
+    return function submitComment() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
     className: "comment-submit-page",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
       className: "hotel-name",
-      children: "HelloHelloHelloHelloHello"
+      children: hotelName
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
       className: "comment-score",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.Text, {
@@ -140,8 +236,8 @@ function Index() {
       className: "comment-text",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.Text, {
         className: "text-tips1",
-        children: cText == '' ? 'please enter your comment...' : ''
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.Input, {
+        children: cText == '' ? '欢迎你分享对酒店服务、环境、设施和价格等的评价...' : ''
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.Textarea, {
         className: "text-content",
         value: cText,
         type: "text",
@@ -150,7 +246,7 @@ function Index() {
         }
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
         className: "text-tips2",
-        children: "no less than 5 chars"
+        children: "\u81F3\u5C115\u4E2A\u5B57"
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
       className: "comment-imgs",

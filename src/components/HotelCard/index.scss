@@ -32,6 +32,7 @@
             font-size: 44rpx;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-weight: bolder;
         }
 
         .comment {
@@ -56,6 +57,10 @@
         .location {
             font-size: 30rpx;
             color: gray;
+            max-width: 400rpx;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .comment-content {
