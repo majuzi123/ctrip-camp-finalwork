@@ -5,7 +5,7 @@ import Taro from '@tarojs/taro'
 class App extends Component {
 
   componentDidMount() {
-    Taro.cloud.init({ traceUser: true })
+    Taro.cloud.init({ env: 'cloud-3g1s9anved8781a2', traceUser: true })
     console.log("componentDidMount");
   }
 

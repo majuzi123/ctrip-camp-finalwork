@@ -50,6 +50,7 @@ var App = /*#__PURE__*/function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.init({
+        env: 'cloud-3g1s9anved8781a2',
         traceUser: true
       });
       console.log("componentDidMount");
