@@ -32,9 +32,16 @@ export default function Index() {
 
   return (
     <View className='hotal-list-page'>
+      <View className='fenlei'>
+        <View>全部</View>
+        <View>有图·视频51</View>
+        <View>差评2</View>
+        <View>筛选</View>
+      </View>
       {Array.isArray(hotelsList) && hotelsList.map((item) => (
         <CommentListCard hotelDetails={item} ></CommentListCard>
       ))}
+      <Button className='tiaozhuan'>匿名点评</Button>
     </View>
   )
 

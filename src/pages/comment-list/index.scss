@@ -1,3 +1,19 @@
 .hotal-list-page {
-    background-color: rgba($color: gray, $alpha: 0.3);
+    background-color: rgba($color: white, $alpha: 0.3);
+}
+.tiaozhuan{
+    position:fixed;
+   bottom:0;
+   width:730rpx;
+   //height:60px;   /* 底部高度 */
+   background:rgb(91,130,233);
+   margin-left: 15rpx;
+   border-radius: 10rpx;
+   color: #f7f4f4;
+   font-size: 35rpx;
+}
+.fenlei{
+    display: flex;
+  justify-content: space-around;
+
 }

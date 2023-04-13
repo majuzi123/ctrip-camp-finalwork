@@ -1,7 +1,7 @@
 .hotel-card {
     width: 98%;
     display: flex;
-    height: 400rpx;
+   // height: 400rpx;
     margin: 8rpx;
     border-radius: 10rpx;
     overflow: hidden;
@@ -15,7 +15,7 @@
 	.upperContent {
 		background-color: white;
 		padding-bottom: 1rpx;
-		margin: 20rpx 15rpx 10rpx 15rpx;
+		margin: 10rpx 15rpx 10rpx 15rpx;
 		border-bottom-right-radius: 15rpx;
 		border-bottom-left-radius: 15rpx;
 	}
@@ -134,5 +134,87 @@
         }
     }
 
-   
+	.starItem {
+		background-color: #eeeeee;
+		width: max-content;
+        height: 30rpx;
+        line-height: 20rpx;
+		// overflow: hidden;
+		//white-space: nowrap;
+        margin-top: 30rpx;
+		padding: 6rpx 8rpx 6rpx 8rpx;
+		border-radius: 10rpx;
+		margin-right: 10rpx;
+		font-size: 25rpx;
+	}
+	.fangxing{
+		margin-top: 25rpx;
+		margin-left: 20rpx;
+		font-size: 30rpx;
+		color: rgb(28, 28, 28);
+	}
+	.leibie{
+		margin-top: 25rpx;
+		margin-left: 15rpx;
+		font-size: 30rpx;
+		color: gray;
+	}
+	.comment{
+		font-size: 30rpx;
+		color: rgb(28, 28, 28);
+		margin-left: 20rpx;
+		margin-right: 80rpx;
+		//padding-right: 20rpx;
+		margin-top: 20rpx;
+		letter-spacing: 3rpx;
+		line-height: 50rpx;
+	}
+	.qz_imgs {
+		position: relative;
+		display: flex;
+		overflow: hidden;
+		//justify-content: space-between;
+		flex-wrap: wrap;
+  
+		&.qz_imgs3 {
+		  Image {
+			width: 225rpx;
+			height: 225rpx;
+			object-fit: cover;
+			border-radius: 3px;
+			float: left;
+			margin: 5rpx 5rpx 5rpx 5rpx;
+		  }
+		}
+	  }
+	  .reply{
+		    background-color: #eeeeee;
+			font-size: 30rpx;
+			color: rgb(28, 28, 28);
+			margin-left: 20rpx;
+			margin-right: 80rpx;
+			//padding-right: 20rpx;
+			margin-top: 20rpx;
+			letter-spacing: 3rpx;
+			line-height: 50rpx;
+		    padding-left: 20rpx;
+			padding-right: 20rpx;
+	  }
+	  .youyong{
+		//position: absolute;
+		width: 90%;
+		display:flex;
+		justify-content:right;
+		margin-top: 30rpx;
+	  
+	  }
+	  .youyongText{
+		width: 165rpx;
+		height: 60rpx;
+		text-align:center;
+		border: 2px solid rgb(178, 176, 176);
+        border-radius: 10rpx;
+		line-height: 60rpx;
+		margin-left: auto;
+	  }
 }
