@@ -10,7 +10,7 @@ export default function HotelCard({
     return (
         <View className='hotel-card'>
             <View className='card-left'>
-                <Image className='hotel-image' src={hotelDetails.image}></Image>
+                <Image className='hotel-image' src={hotelDetails.image} lazyLoad></Image>
             </View>
             <View className='card-right'>
                 <View className='hotel-name'>{hotelDetails.name}</View>
