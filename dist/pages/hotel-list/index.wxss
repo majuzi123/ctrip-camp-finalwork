@@ -2,7 +2,67 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/hotel-list/index.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .hotal-list-page {
-  background-color: rgba(128, 128, 128, 0.3);
+  background-color: rgba(182, 176, 176, 0.3);
+}
+.hotal-list-page .selector {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 40rpx;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 30rpx;
+}
+.hotal-list-page .selector .filters {
+  width: 70%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hotal-list-page .selector .filters .fliter {
+  height: 50rpx;
+  margin: 0 20rpx;
+  width: 33%;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1rpx solid black;
+  border-radius: 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.hotal-list-page .selector .searcher {
+  width: 30%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 20rpx;
+}
+.hotal-list-page .selector .searcher .search {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1rpx solid black;
+  border-radius: 10rpx;
+}
+.hotal-list-page .hotel-cards {
+  width: auto;
+  height: 90vh;
+  margin-top: 40rpx;
+}
+.hotal-list-page .hotel-cards .loading {
+  color: rgb(209, 146, 156);
+  font-weight: bold;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 50rpx;
+  width: 100%;
+  font-size: 40rpx;
+  margin-bottom: 20rpx;
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/HotelCard/index.scss ***!

@@ -2,7 +2,27 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/comment-list/index.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .hotal-list-page {
-  background-color: rgba(128, 128, 128, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tiaozhuan {
+  position: fixed;
+  bottom: 0;
+  width: 730rpx;
+  background: rgb(91, 130, 233);
+  margin-left: 15rpx;
+  border-radius: 10rpx;
+  color: #f7f4f4;
+  font-size: 35rpx;
+}
+
+.fenlei {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/CommentListCard/index.scss ***!
@@ -12,7 +32,6 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 400rpx;
   margin: 8rpx;
   border-radius: 10rpx;
   overflow: hidden;
@@ -24,7 +43,7 @@
 .hotel-card .upperContent {
   background-color: white;
   padding-bottom: 1rpx;
-  margin: 20rpx 15rpx 10rpx 15rpx;
+  margin: 10rpx 15rpx 10rpx 15rpx;
   border-bottom-right-radius: 15rpx;
   border-bottom-left-radius: 15rpx;
 }
@@ -150,4 +169,88 @@
 .hotel-card .card-left .hotel-image {
   height: 100%;
   width: 100%;
+}
+.hotel-card .starItem {
+  background-color: #eeeeee;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 30rpx;
+  line-height: 20rpx;
+  margin-top: 30rpx;
+  padding: 6rpx 8rpx 6rpx 8rpx;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+  font-size: 25rpx;
+}
+.hotel-card .fangxing {
+  margin-top: 25rpx;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: rgb(28, 28, 28);
+}
+.hotel-card .leibie {
+  margin-top: 25rpx;
+  margin-left: 15rpx;
+  font-size: 30rpx;
+  color: gray;
+}
+.hotel-card .comment {
+  font-size: 30rpx;
+  color: rgb(28, 28, 28);
+  margin-left: 20rpx;
+  margin-right: 80rpx;
+  margin-top: 20rpx;
+  letter-spacing: 3rpx;
+  line-height: 50rpx;
+}
+.hotel-card .qz_imgs {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.hotel-card .qz_imgs.qz_imgs3 Image {
+  width: 225rpx;
+  height: 225rpx;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3rpx;
+  float: left;
+  margin: 5rpx 5rpx 5rpx 5rpx;
+}
+.hotel-card .reply {
+  background-color: #eeeeee;
+  font-size: 30rpx;
+  color: rgb(28, 28, 28);
+  margin-left: 20rpx;
+  margin-right: 80rpx;
+  margin-top: 20rpx;
+  letter-spacing: 3rpx;
+  line-height: 50rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.hotel-card .youyong {
+  width: 90%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-top: 30rpx;
+}
+.hotel-card .youyongText {
+  width: 165rpx;
+  height: 60rpx;
+  text-align: center;
+  border: 2rpx solid rgb(178, 176, 176);
+  border-radius: 10rpx;
+  line-height: 60rpx;
+  margin-left: auto;
 }

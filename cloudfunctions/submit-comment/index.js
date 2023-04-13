@@ -1,8 +1,9 @@
 const cloud = require('wx-server-sdk')
-cloud.init()
+cloud.init({ env: 'cloud-3g1s9anved8781a2' })
 
 exports.main = async (data) => {
-    const db = cloud.database()
+
+    const db = cloud.database({ env: 'cloud-3g1s9anved8781a2' })
     await db.collection('comment').add({
         data: data,
         success: function (res) {
@@ -10,5 +11,4 @@ exports.main = async (data) => {
             return res
         }
     })
-    // await console.log(data)
 }

@@ -10,11 +10,11 @@
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ Index; }
 /* harmony export */ });
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js */ "./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js");
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js */ "./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js");
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js */ "./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js");
+/* harmony import */ var D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js */ "./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js");
+/* harmony import */ var D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "webpack/container/remote/react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
@@ -48,26 +48,26 @@ function Index() {
   //   hotelId = '00001'
   // })
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
-    _useState2 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState, 2),
+    _useState2 = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState, 2),
     cScore = _useState2[0],
     setCScore = _useState2[1];
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-    _useState4 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState3, 2),
+    _useState4 = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState3, 2),
     cText = _useState4[0],
     setCText = _useState4[1];
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
-    _useState6 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState5, 2),
+    _useState6 = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState5, 2),
     cImgs = _useState6[0],
     setCImgs = _useState6[1];
   var IMG_MAX_COUNT = 9;
   var addImg = /*#__PURE__*/function () {
-    var _ref = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee() {
+    var _ref = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee() {
       var imgs, res, _iterator, _step, path, cloudPath;
-      return (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().wrap(function _callee$(_context) {
+      return (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             console.log("addImg");
-            imgs = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_9__["default"])(cImgs);
+            imgs = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_9__["default"])(cImgs);
             _context.next = 4;
             return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().chooseImage({
               count: IMG_MAX_COUNT - cImgs.length,
@@ -75,7 +75,7 @@ function Index() {
             });
           case 4:
             res = _context.sent;
-            _iterator = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_10__["default"])(res.tempFilePaths);
+            _iterator = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_10__["default"])(res.tempFilePaths);
             _context.prev = 6;
             _iterator.s();
           case 8:
@@ -120,7 +120,7 @@ function Index() {
   }();
   var deleteImg = function deleteImg(index) {
     console.log("deleteImg" + index);
-    var imgs = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_9__["default"])(cImgs);
+    var imgs = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_9__["default"])(cImgs);
     var newCImg = [];
     for (var i = 0; i < imgs.length; i++) {
       if (i != index) {
@@ -130,8 +130,8 @@ function Index() {
     setCImgs(newCImg);
   };
   var submitComment = /*#__PURE__*/function () {
-    var _ref2 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee2() {
-      return (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().wrap(function _callee2$(_context2) {
+    var _ref2 = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee2() {
+      return (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().wrap(function _callee2$(_context2) {
         while (1) switch (_context2.prev = _context2.next) {
           case 0:
             console.log("clicked submit");
@@ -307,23 +307,6 @@ var inst = Page((0,_tarojs_runtime__WEBPACK_IMPORTED_MODULE_0__.createPageConfig
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
-  \**********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _arrayWithoutHoles; }
-/* harmony export */ });
-/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(arr);
-}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js":
 /*!******************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js ***!
@@ -385,59 +368,6 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
       }
     }
   };
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
-  \********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _iterableToArray; }
-/* harmony export */ });
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
-  \**********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _nonIterableSpread; }
-/* harmony export */ });
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
-  \**********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _toConsumableArray; }
-/* harmony export */ });
-/* harmony import */ var _arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles.js */ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js");
-/* harmony import */ var _iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray.js */ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js");
-/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js");
-/* harmony import */ var _nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableSpread.js */ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js");
-
-
-
-
-function _toConsumableArray(arr) {
-  return (0,_arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || (0,_iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__["default"])(arr) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__["default"])(arr) || (0,_nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 }
 
 /***/ })
