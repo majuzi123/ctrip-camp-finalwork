@@ -3,21 +3,24 @@
 
 
     .selector {
+        background-color: white;
+        box-shadow: 10rpx;
         position: sticky;
-        height: 40rpx;
+        height: 60rpx;
         display: flex;
-        font-size: 30rpx;
+        font-size: 28rpx;
+        color: #333;
 
         .filters {
             width: 70%;
             display: flex;
+            justify-content: space-between;
 
             .fliter {
                 height: 50rpx;
                 margin: 0 20rpx;
-                width: 33%;
                 align-items: center;
-                border: 1rpx solid black;
+                border: 1rpx solid #ccc;
                 border-radius: 10rpx;
                 white-space: nowrap;
                 overflow: hidden;
@@ -32,7 +35,7 @@
 
             .search {
                 align-items: center;
-                border: 1rpx solid black;
+                border: 1rpx solid #ccc;
                 border-radius: 10rpx;
             }
         }
@@ -40,8 +43,7 @@
 
     .hotel-cards {
         width: auto;
-        height: calc(90vh);
-        margin-top: 40rpx;
+        height: calc(95vh);
 
         .loading {
             color: rgb(209, 146, 156);

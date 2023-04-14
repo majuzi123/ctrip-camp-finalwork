@@ -27,7 +27,7 @@ function StarsScore(_ref) {
   var score = _ref.score,
     starSize = _ref.starSize;
   var defaultSize = 32;
-  console.log(starSize);
+  // console.log(starSize)
   if (starSize == undefined || starSize == null) {
     starSize = defaultSize;
   }

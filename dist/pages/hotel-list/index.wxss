@@ -5,28 +5,34 @@
   background-color: rgba(182, 176, 176, 0.3);
 }
 .hotal-list-page .selector {
+  background-color: white;
+  -webkit-box-shadow: 10rpx;
+          box-shadow: 10rpx;
   position: -webkit-sticky;
   position: sticky;
-  height: 40rpx;
+  height: 60rpx;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 30rpx;
+  font-size: 28rpx;
+  color: #333;
 }
 .hotal-list-page .selector .filters {
   width: 70%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .hotal-list-page .selector .filters .fliter {
   height: 50rpx;
   margin: 0 20rpx;
-  width: 33%;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1rpx solid black;
+  border: 1rpx solid #ccc;
   border-radius: 10rpx;
   white-space: nowrap;
   overflow: hidden;
@@ -44,13 +50,12 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1rpx solid black;
+  border: 1rpx solid #ccc;
   border-radius: 10rpx;
 }
 .hotal-list-page .hotel-cards {
   width: auto;
-  height: 90vh;
-  margin-top: 40rpx;
+  height: 95vh;
 }
 .hotal-list-page .hotel-cards .loading {
   color: rgb(209, 146, 156);
