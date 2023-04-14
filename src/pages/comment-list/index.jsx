@@ -1,5 +1,5 @@
 import { Component, useState } from 'react'
-import { View, Text, Input, Button, Checkbox, Icon } from '@tarojs/components'
+import { View, Text, Input, Button, Checkbox, Icon,ScrollView } from '@tarojs/components'
 import Taro, { useLoad } from '@tarojs/taro';
 import classnames from 'classnames'
 import './index.scss'
@@ -8,33 +8,70 @@ import CommentListCard from '../../components/CommentListCard';
 
 export default function Index() {
 
-  const [hotelsList, setHotelList] = useState([{
-    hotelId: "0001",
-    name: "上海虹桥国展地铁站@酒店",
-    imageSrc: "https://pic.imgdb.cn/item/643268450d2dde57772389fa.jpg",
-    price: 172,
-    commentContent: "去虹桥机场和火车站很方便。去虹桥机场和火车站很方便。去虹桥机场和火车站很方便。去虹桥机场和火车站很方便。",
-    commentNum: 10,
-    commentScore: 4.0,
-    location: "近淞虹路地铁站·虹桥"
-  }, {
-    hotelId: "0002",
-    name: "上海携程枚举酒店",
-    imageSrc: "https://pic.imgdb.cn/item/6432689c0d2dde577723f9e6.jpg",
-    price: 400,
-    commentContent: "环境优美卫生整洁。",
-    commentScore: 4.8,
-    commentNum: 26,
-    location: "近淞虹路地铁站·虹桥"
-  }]);
+  // const [CommentsList, setCommentList] = useState([{
+  //   commentId: "0001",
+  //   nickname:'一号用户',
+  //   userImg:'https://mp-32c7feb5-a197-4820-b874-2ef762f317e6.cdn.bspapp.com/cloudstorage/cf91eed7-8704-4a26-bdaf-4085f7a7ca7e.jpeg',
+  //   userTag1:'白银贵宾',
+  //   userTag2:'点评新星',
+  //   liveTime:'2023年04月',
+  //   location:'浙江',
+  //   fangxing:'畅享大床房',
+  //   leibie:'独自旅行',
+  //   content:'入住的酒店大厅看起来很舒适，前台的小姐姐服务业很好，酒店的环境也是一级棒，总之强烈推荐，欢迎大家前来入住！',
+  //   star:5.0,
+  //   ImgList:['https://mp-32c7feb5-a197-4820-b874-2ef762f317e6.cdn.bspapp.com/cloudstorage/0b5cf52c-4927-480b-9b96-f2e25dbad30f.jpg','https://mp-32c7feb5-a197-4820-b874-2ef762f317e6.cdn.bspapp.com/cloudstorage/1545634f-3b76-4d12-a87e-f34c774e5984.jpg',
+  //   'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg','https://fuss10.elemecdn.com/0/6f/e35ff375812e6b0020b6b4e8f9583jpeg.jpeg','https://fuss10.elemecdn.com/d/e6/c4d93a3805b3ce3f323f7974e6f78jpeg.jpeg'],
+  //   reply:'酒店回复：感谢对我们酒店的认可，您的鼓励是我们前进的动力，有机会暑假再来玩呀！'
+  // }, {
+  //   commentId: "0002",
+  //   nickname:'二号用户',
+  //   userImg:'https://mp-32c7feb5-a197-4820-b874-2ef762f317e6.cdn.bspapp.com/cloudstorage/cf91eed7-8704-4a26-bdaf-4085f7a7ca7e.jpeg',
+  //   userTag1:'白银贵宾',
+  //   userTag2:'点评新星',
+  //   liveTime:'2023年04月',
+  //   location:'浙江',
+  //   fangxing:'畅享大床房',
+  //   leibie:'独自旅行',
+  //   content:'入住的酒店大厅看起来很舒适，前台的小姐姐服务业很好，酒店的环境也是一级棒，总之强烈推荐，欢迎大家前来入住！',
+  //   star:5.0,
+  //   ImgList:['https://mp-32c7feb5-a197-4820-b874-2ef762f317e6.cdn.bspapp.com/cloudstorage/0b5cf52c-4927-480b-9b96-f2e25dbad30f.jpg','https://mp-32c7feb5-a197-4820-b874-2ef762f317e6.cdn.bspapp.com/cloudstorage/1545634f-3b76-4d12-a87e-f34c774e5984.jpg',
+  //   'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg','https://fuss10.elemecdn.com/0/6f/e35ff375812e6b0020b6b4e8f9583jpeg.jpeg','https://fuss10.elemecdn.com/d/e6/c4d93a3805b3ce3f323f7974e6f78jpeg.jpeg'],
+  //   reply:'酒店回复：感谢对我们酒店的认可，您的鼓励是我们前进的动力，有机会暑假再来玩呀！'
+  // }]);
   // useLoad(() => {
   // })
+  const [CommentsList, setCommentList] = useState([]);
+  const [loading, setLoading] = useState(true)
+  useLoad(async () => {
+    const comments = (await Taro.cloud.callFunction({ name: 'get-comment-list', data: { num: 10 } })).result
+    console.log(comments)
+    setCommentList(comments)
+    setLoading(false)
+  })
 
+  const appendComments = async () => {
+    setLoading(true)
+    const comments = (await Taro.cloud.callFunction({ name: 'get-comment-list', data: { num: 10 } })).result
+    console.log(comments)
+    setCommentList(CommentsList.concat(comments))
+    setLoading(false)
+  }
   return (
     <View className='hotal-list-page'>
-      {Array.isArray(hotelsList) && hotelsList.map((item) => (
-        <CommentListCard hotelDetails={item} ></CommentListCard>
+      <View className='fenlei'>
+        <View>全部</View>
+        <View>有图·视频51</View>
+        <View>差评2</View>
+        <View>筛选</View>
+      </View>
+      <ScrollView className='hotel-cards' scrollY onScrollToLower={(appendComments)}>
+      {Array.isArray(CommentsList) && CommentsList.map((item) => (
+        <CommentListCard commentDetails={item} ></CommentListCard>
       ))}
+       <View className='loading' hidden={loading}>正在加载评论数据...</View>
+      </ScrollView>
+      <Button className='tiaozhuan' onClick={() => Taro.navigateTo({ url: '../comment-submit/index' })}>匿名点评</Button>
     </View>
   )
 
