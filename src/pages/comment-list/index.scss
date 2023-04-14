@@ -17,3 +17,19 @@
   justify-content: space-around;
 
 }
+.hotel-cards {
+  width: auto;
+  height: calc(90vh);
+  margin-top: 40rpx;
+
+  .loading {
+      color: rgb(209, 146, 156);
+      font-weight: bold;
+      align-items: center;
+      text-align: center;
+      height: 50rpx;
+      width: 100%;
+      font-size: 40rpx;
+      margin-bottom: 20rpx;
+  }
+}

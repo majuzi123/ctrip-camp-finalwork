@@ -24,6 +24,25 @@
       -ms-flex-pack: distribute;
           justify-content: space-around;
 }
+
+.hotel-cards {
+  width: auto;
+  height: 90vh;
+  margin-top: 40rpx;
+}
+
+.hotel-cards .loading {
+  color: rgb(209, 146, 156);
+  font-weight: bold;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 50rpx;
+  width: 100%;
+  font-size: 40rpx;
+  margin-bottom: 20rpx;
+}
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/CommentListCard/index.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
