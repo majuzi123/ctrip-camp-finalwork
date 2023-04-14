@@ -170,11 +170,13 @@ function Index() {
                     data: {
                       hotelName: hotelName,
                       hotelId: hotelId,
-                      comment: {
-                        score: cScore,
-                        text: cText,
-                        imgs: cImgs
-                      }
+                      liveTime: new Date().toString,
+                      location: '未知属地',
+                      nickname: '匿名用户',
+                      userImg: 'https://pic.imgdb.cn/item/64395c040d2dde5777264e41.jpg',
+                      star: cScore,
+                      content: cText,
+                      ImgList: cImgs
                     }
                   }).then(function (res) {
                     _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().hideLoading();
