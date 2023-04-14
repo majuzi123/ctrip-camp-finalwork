@@ -7,12 +7,14 @@ import FlagSelector from '../../components/flagSelector';
 import IconFont from '../../components/iconfont';
 
 export default function Index() {
-  var hotelName = '上海虹桥国展地铁站@酒店';
-  var hotelId = '00001';
-  // useLoad(() => {
-  //   hotelName = 'XXX酒店';
-  //   hotelId = '00001'
-  // })
+  const [hotelName, setHotelName] = useState('');
+  const [hotelId, setHotelId] = useState('');
+  useLoad((options) => {
+    console.log(options)
+    setHotelName(options.hotelName)
+    setHotelId(options.hotelId)
+  })
+
   const [cScore, setCScore] = useState(0);
   const [cText, setCText] = useState('');
   const [cImgs, setCImgs] = useState([]);
@@ -81,6 +83,7 @@ export default function Index() {
               Taro.showToast({ title: '提交失败', icon: 'error', duration: 1000 })
             } else {
               Taro.showToast({ title: '提交成功', icon: 'success', duration: 1000 })
+              setTimeout(() => { Taro.navigateBack() }, 1000)
             }
           })
         }
