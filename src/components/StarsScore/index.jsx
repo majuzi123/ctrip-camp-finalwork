@@ -8,7 +8,7 @@ export default function StarsScore({
     starSize
 }) {
     const defaultSize = 32;
-    console.log(starSize)
+    // console.log(starSize)
     if (starSize == undefined || starSize == null) {
         starSize = defaultSize
     }
