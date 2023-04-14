@@ -177,7 +177,7 @@ function Index() {
                     data: {
                       hotelName: hotelName,
                       hotelId: hotelId,
-                      liveTime: new Date().toString,
+                      liveTime: new Date().toString(),
                       location: '未知属地',
                       nickname: '匿名用户',
                       userImg: 'https://pic.imgdb.cn/item/64395c040d2dde5777264e41.jpg',
