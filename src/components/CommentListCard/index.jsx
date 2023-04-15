@@ -12,7 +12,7 @@ export default function CommentListCard({
     const userImg='https://mp-32c7feb5-a197-4820-b874-2ef762f317e6.cdn.bspapp.com/cloudstorage/cf91eed7-8704-4a26-bdaf-4085f7a7ca7e.jpeg'
     const userTag1='白银贵宾'
     const userTag2='点评新星'
-    const liveTime='2023年04月'
+    const liveTime=new Date(commentDetails.liveTime)
     const location='浙江'
     const fangxing='畅享大床房'
     const leibie='独自旅行'
@@ -26,22 +26,22 @@ export default function CommentListCard({
             <View className="homeContainer">
 		<View className="upperContent">
 			<View class="opusDetailItem">
-				<Image src={commentDetails.userImg} alt="头像" mode="widthFix"></Image>
+				<Image src={userImg} alt="头像" mode="widthFix"></Image>
                 <View className='columnItem'>
                 <View className='userInfo'>
 					<View className="opusDetailTitle">{commentDetails.nickname}</View>
 					<View className="bodyTopic">
                     <View className="bodyTopicItem">
-						{commentDetails.userTag1}
+						{userTag1}
 					</View>
                     <View className="bodyTopicItem">
-						{commentDetails.userTag2}
+						{userTag2}
 					</View>
 					
                    
 				</View>
                 </View>
-                <View className='liveTime'>{commentDetails.liveTime}入住 | 发布于{commentDetails.location}</View>
+                <View className='liveTime'>{liveTime.getFullYear()}年{liveTime.getMonth()+1}月入住 | 发布于{commentDetails.location}</View>
                 </View>
 			</View>
             <View className='rowItem'>
@@ -49,8 +49,8 @@ export default function CommentListCard({
                 <View className="starItem">
 						{commentDetails.star}.0分
 					</View>
-                    <View className='fangxing'>{commentDetails.fangxing}</View>
-                    <View className='leibie'>| {commentDetails.leibie}</View>
+                    <View className='fangxing'>{fangxing}</View>
+                    <View className='leibie'>| {leibie}</View>
             </View>
             <View className='comment'>{commentDetails.content}</View>
             
@@ -61,7 +61,7 @@ export default function CommentListCard({
           <Image className='tupian' src={item}></Image>
         )) : null}
             </View>
-            <View className='reply'>{commentDetails.reply}</View>
+            <View className='reply'>{reply}</View>
             <View className='youyong'><View className='youyongText'>▲有用3</View></View>
             </View>
             </View>
