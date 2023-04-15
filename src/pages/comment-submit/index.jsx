@@ -67,15 +67,16 @@ export default function Index() {
           Taro.cloud.callFunction({
             name: 'submit-comment',
             data: {
-              hotelName: hotelName,
-              hotelId: hotelId,
-              liveTime: new Date().toString(),
+              hotelName: hotelName ? hotelName : 'XXX酒店',
+              hotelId: hotelId ? hotelId : '00000',
+              liveTime: new Date().valueOf(),
               location: '未知属地',
               nickname: '匿名用户',
               userImg: 'https://pic.imgdb.cn/item/64395c040d2dde5777264e41.jpg',
               star: cScore,
               content: cText,
-              ImgList: cImgs
+              ImgList: cImgs,
+              pass: null
             }
           }).then((res) => {
             Taro.hideLoading()
