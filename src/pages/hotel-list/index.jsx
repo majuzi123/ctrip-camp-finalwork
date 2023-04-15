@@ -107,7 +107,12 @@ export default function Index() {
       </View>
       <ScrollView className='hotel-cards' scrollY onScrollToLower={(appendHotels)}>
         {Array.isArray(hotelsList) && hotelsList.map((item) => (
-          <HotelCard hotelDetails={item} ></HotelCard>
+          <View onClick={() => (Taro.navigateTo({
+            // url: '../comment-submit/index?hotelId=' + item._id + '&hotelName=' + item.name
+            url: '../comment-list/index?hotelId=' + item._id + '&hotelName=' + item.name
+          }))}>
+            <HotelCard hotelDetails={item} />
+          </View>
         ))}
         <View className='loading' hidden={loading}>正在加载酒店数据...</View>
       </ScrollView>
