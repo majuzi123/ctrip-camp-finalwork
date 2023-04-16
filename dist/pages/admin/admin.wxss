@@ -1,0 +1,23 @@
+/* pages/admin/admin.wxss */
+page{
+  background: #0388f4;
+}
+
+.root{
+  background:white;
+  border-radius: 80rpx;
+  height: 450rpx;
+  padding: 35rpx;
+  margin:30rpx;
+}
+input{
+  border: 5rpx solid #0388f4;
+  border-radius: 10rpx;
+  margin: 20rpx;
+}
+button{
+  width: 400rpx;
+  color: white;
+  margin-top:40rpx;
+  border: radius 20rpx;
+}

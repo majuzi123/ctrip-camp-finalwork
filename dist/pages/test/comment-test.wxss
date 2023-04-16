@@ -1,0 +1,96 @@
+/* pages/admin-comment/comment.wxss */
+page {
+  background-color: gainsboro;
+}
+
+
+.navbar {
+  display: flex;
+  background: #fff;
+}
+
+.none_tab {
+  position: relative;
+  top: 20rpx;
+  color: #999;
+  font-size: 40rpx;
+}
+
+.navbar .item {
+  /* 默认选中菜单 */
+  position: relative;
+  flex: auto;
+  font-size: 32rpx;
+  width: 100rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #333;
+  border-bottom: 6rpx solid #ddd;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  padding: 25rpx;
+  background: white;
+  border-bottom: 1px solid gainsboro;
+  align-items: flex-start;
+}
+
+
+.touxiang{
+  border-radius: 50%;
+  width:100rpx;
+  height:100rpx;
+  margin-top:20rpx
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10rpx;
+  row-gap: 10rpx;
+}
+
+.navbar .item.active {
+  /* 选中菜单样式 */
+  color: #333;
+  border-bottom: 6rpx solid #d66058;
+}
+.userInfo{
+  display: flex;
+  flex-direction: row;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+}
+.time{
+  margin-left: 20rpx;
+  font-size: small;
+  color: gray;
+}
+.nickname{
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+}
+.hotel{
+  width: 225rpx;
+  height: 225rpx;
+  }
+.button{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+.disagree{
+  margin-left: 50rpx;
+}
+.pics{
+ display: flex;
+ flex-direction: row;
+
+}
+.contentText{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}

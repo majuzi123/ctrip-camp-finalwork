@@ -1,0 +1,12 @@
+<!--pages/admin/admin.wxml-->
+  <view wx:if="{{!isAdmin}}" class="root">
+    账号：
+    <input bindinput="getName"></input>
+    密码：
+    <input bindinput="getPassWord"></input>
+    <button type="primary" class="btn_fabu" bindtap="formSubmit">管理员登录</button>
+</view>
+
+<view wx:if="{{isAdmin}}">
+<button type="primary" bindtap="goAdminComment">评论审核</button>
+</view>
