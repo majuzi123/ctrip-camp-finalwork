@@ -84,18 +84,13 @@ export default function Index() {
         <View className='filters'>
           <Picker className='fliter' range={rangeScore} onChange={(e) => {
             changeFilter(0, rangeScore[e.target.value])
-          }}>
-            <View className='picker-content'>{range[0]}</View>
-          </Picker>
+          }}>{range[0]}</Picker>
           <Picker className='fliter' range={rangeCommentNum} onChange={(e) => {
             changeFilter(1, rangeCommentNum[e.target.value])
-          }}>
-            <View className='picker-content'>{range[1]}</View>
-          </Picker>
+          }}>{range[1]}</Picker>
           <Picker className='fliter' range={rangePrice} onChange={(e) => {
             changeFilter(2, rangePrice[e.target.value])
-          }}>
-            <View className='picker-content'>{range[2]}</View>
+          }}>{range[2]}
           </Picker>
         </View>
         <View className='searcher'>
@@ -107,12 +102,10 @@ export default function Index() {
       </View>
       <ScrollView className='hotel-cards' scrollY onScrollToLower={(appendHotels)}>
         {Array.isArray(hotelsList) && hotelsList.map((item) => (
-          <View onClick={() => (Taro.navigateTo({
+          <HotelCard hotelDetails={item} onClick={() => (Taro.navigateTo({
             // url: '../comment-submit/index?hotelId=' + item._id + '&hotelName=' + item.name
             url: '../comment-list/index?hotelId=' + item._id + '&hotelName=' + item.name
-          }))}>
-            <HotelCard hotelDetails={item} />
-          </View>
+          }))} />
         ))}
         <View className='loading' hidden={loading}>正在加载酒店数据...</View>
       </ScrollView>

@@ -9,10 +9,38 @@ import IconFont from '../../components/iconfont';
 export default function Index() {
   const [hotelName, setHotelName] = useState('');
   const [hotelId, setHotelId] = useState('');
+  let anonymous = false;
   useLoad((options) => {
     console.log(options)
     setHotelName(options.hotelName)
     setHotelId(options.hotelId)
+    // if (!global.city) {
+    //   global.city = '未知属地'
+    //   Taro.request({
+    //     url: 'https://whois.pconline.com.cn/ipJson.jsp?json=true', //请求地址信息,当前ip属地
+    //     header: {
+    //       'content-type': 'application/json'
+    //     },
+    //     success: function (res) {
+    //       global.city = res.data.pro + '-' + res.data.city;
+    //       console.log(global.city)
+    //     }
+    //   })
+    // }
+    if (!global.userInfo) {
+      global.userInfo = {}
+      Taro.getUserInfo({
+        success: function (res) {
+          global.userInfo = res.userInfo
+          // var nickName = userInfo.nickName
+          // var avatarUrl = userInfo.avatarUrl
+          // var gender = userInfo.gender //性别 0：未知、1：男、2：女
+          // var province = userInfo.province
+          // var city = userInfo.city
+          // var country = userInfo.country
+        }
+      })
+    }
   })
 
   const [cScore, setCScore] = useState(0);
@@ -48,6 +76,7 @@ export default function Index() {
 
   const submitComment = async () => {
     console.log("clicked submit")
+    console.log(userInfo)
     if (cScore == 0) {
       Taro.showToast({ title: '请先评分', icon: 'error', duration: 1000 })
       return;
@@ -67,12 +96,12 @@ export default function Index() {
           Taro.cloud.callFunction({
             name: 'submit-comment',
             data: {
-              hotelName: hotelName ? hotelName : 'XXX酒店',
+              hotelName: hotelName ? hotelName : '未知酒店',
               hotelId: hotelId ? hotelId : '00000',
               liveTime: new Date().valueOf(),
-              location: '未知属地',
-              nickname: '匿名用户',
-              userImg: 'https://pic.imgdb.cn/item/64395c040d2dde5777264e41.jpg',
+              location: userInfo.province && userInfo.city ? userInfo.province + ' ' + userInfo.city : '未知属地',
+              nickname: !anonymous && userInfo.nickName ? userInfo.nickName : '匿名用户',
+              userImg: !anonymous && userInfo.avatarUrl ? userInfo.avatarUrl : 'https://pic.imgdb.cn/item/64395c040d2dde5777264e41.jpg',
               star: cScore,
               content: cText,
               ImgList: cImgs,
@@ -123,7 +152,7 @@ export default function Index() {
       ))}
         {cImgs.length < IMG_MAX_COUNT && <View className='img-container'><Image src='https://pic.imgdb.cn/item/6434ffef0d2dde577737f3bf.jpg' className='comment-img' onClick={addImg}></Image></View>}
       </View>
-
+      <Checkbox className='anonymous-check' onClick={() => { anonymous = !anonymous; console.log(anonymous) }}>匿名评论</Checkbox>
       <Button className='submit-btn' onClick={submitComment}>提交</Button>
     </View>
   )

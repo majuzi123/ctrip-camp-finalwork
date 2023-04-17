@@ -77,6 +77,11 @@
   top: -10rpx;
   right: -20rpx;
 }
+.comment-submit-page .anonymous-check {
+  width: 100%;
+  text-align: right;
+  margin: 30rpx;
+}
 .comment-submit-page .submit-btn {
   margin-bottom: 30rpx;
 }
