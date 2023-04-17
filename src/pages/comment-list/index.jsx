@@ -43,8 +43,9 @@ export default function Index() {
   // })
   const [CommentsList, setCommentList] = useState([]);
   const [loading, setLoading] = useState(true)
+  const [index, setIndex] = useState(0)
   useLoad(async () => {
-    const comments = (await Taro.cloud.callFunction({ name: 'get-comment-list', data: { num: 10 } })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { num: 10,index:index } })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
@@ -52,17 +53,45 @@ export default function Index() {
 
   const appendComments = async () => {
     setLoading(true)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-comment-list', data: { num: 10 } })).result
+    console.log(index)
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { num: 10, index:index} })).result
+    
+   
     console.log(comments)
     setCommentList(CommentsList.concat(comments))
     setLoading(false)
   }
+  const onClickAll = async() => {
+    setIndex(0)
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { num: 10,index:index } })).result
+    console.log(comments)
+    setCommentList(comments)
+    setLoading(false)
+    
+  }
+  const onClickPhoto = async() => {
+    setIndex(1)
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { num: 10,index:index } })).result
+    console.log(comments)
+    setCommentList(comments)
+    setLoading(false)
+    
+  }
+  const onClickBad = async () => {
+    setIndex(2)
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { num: 10,index:index } })).result
+    console.log(comments)
+    setCommentList(comments)
+    setLoading(false)
+    
+    //console.log(index)
+  }
   return (
     <View className='hotal-list-page'>
       <View className='fenlei'>
-        <View>全部</View>
-        <View>有图·视频51</View>
-        <View>差评2</View>
+        <View onClick={() => onClickAll()}>全部</View>
+        <View onClick={() => onClickPhoto()}>有图·视频51</View>
+        <View onClick={() => onClickBad()}>差评2</View>
         <View>筛选</View>
       </View>
       <ScrollView className='hotel-cards' scrollY onScrollToLower={(appendComments)}>
