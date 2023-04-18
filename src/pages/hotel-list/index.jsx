@@ -1,19 +1,18 @@
-import { Component, useState } from 'react'
+import { Component, useState, useRef } from 'react'
 import { View, Text, Input, Button, Checkbox, Icon, ScrollView, Picker, Slider } from '@tarojs/components'
-import Taro, { useLoad } from '@tarojs/taro';
+import Taro, { useLoad } from '@tarojs/taro'
 import './index.scss'
 import HotelCard from '../../components/HotelCard';
 import IconFont from '../../components/iconfont';
 
 export default function Index() {
 
-  const [hotelsList, setHotelList] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [hotelsList, setHotelList] = useState([])
 
   const rangeScore = ['不限评分', '1分以上', '2分以上', '3分以上', '4分以上', '4.5分以上', '5分']
   const rangeCommentNum = ['不限评价数', '100评论以上', '500评论以上', '1000评论以上', '5000评论以上', '10000评论以上']
   const rangePrice = ['不限价格', '100元内', '200元内', '400元内', '800元内', '1600元内']
-  var filter = ['不限评分', '不限评价数', '不限价格'] //想要修改后立即刷新页面，仅用useState导致页面刷新后值才修改，所以备份一个可以立即改变值的
+  var filter = ['不限评分', '不限评价数', '不限价格'] //想要修改后立即更改页面信息，仅用useState导致页面刷新后值才修改自身数据，所以备份一个可以立即改变值的变量
   const [range, setRange] = useState(['不限评分', '不限评价数', '不限价格'])
   const [searchContent, setSearchContent] = useState('');
 
@@ -30,25 +29,13 @@ export default function Index() {
       console.log("do search: " + searchContent)
     }
   }
-  //   hotel: {
-  //     "_id": "00001",
-  //     "name": "XX酒店(上海大渡河路地铁站店)",
-  //     "image": "https://pic.imgdb.cn/item/643554db0d2dde5777c63b14.jpg",
-  //     "location": "长风公园地区|靠近大渡河路地铁站",
-  //     "price": 411.0,
-  //     "commentNum": 1229.0,
-  //     "comment": [
-  //         "酒店功能完备",
-  //         "酒店装修豪华"
-  //     ],
-  //     "score": 4.9
-  //   }
+
   useLoad(async () => {
     refreshHotels()
   })
 
   const getHotels = async () => {
-    setLoading(true)
+    document.getElementById('loading').style.visibility = 'visible'
     let range = {
       minScore: parseFloat(filter[0]) ? parseFloat(filter[0]) : 0,//如果NaN，取默认值
       minCommentNum: parseFloat(filter[1]) ? parseFloat(filter[1]) : 0,
@@ -64,13 +51,33 @@ export default function Index() {
       }
     })).result
     console.log(hotels)
-    setLoading(false)
+    document.getElementById('loading').style.visibility = 'hidden'
     return hotels
   }
 
-  const appendHotels = async () => {
+  const appendHotels = throttle(async () => {
+    //节流，防止在加载时再次被触发
+    filter = [...range]
     const result = await getHotels()
     setHotelList(hotelsList.concat(result))
+  }, 300, 1000)
+
+  function throttle(func, waitPre, waitPost) {//修改版的节流操作
+    var timeout1;
+    var timeout2 = setTimeout(function () {
+      timeout2 = null
+    }, waitPre);//2、保证刚接收到数据后，页面渲染时不被触发（获取新数据后渲染时timeout1会直接失效）
+
+    return function () {
+      let context = this;
+      let args = arguments;
+      if (!timeout1 && !timeout2) {
+        func.apply(context, args)
+        timeout1 = setTimeout(function () {
+          timeout1 = null
+        }, waitPost)//1、保证刚触发后，向服务端请求数据期间不能再次触发
+      }
+    }
   }
 
   const refreshHotels = async () => {
@@ -107,7 +114,8 @@ export default function Index() {
             url: '../comment-list/index?hotelId=' + item._id + '&hotelName=' + item.name
           }))} />
         ))}
-        <View className='loading' hidden={loading}>正在加载酒店数据...</View>
+        <View className='tips' id='loading'>正在加载酒店数据...</View>
+        {hotelsList.length == 0 && <View className='tips'>没有符合条件的酒店T_T</View>}
       </ScrollView>
     </View>
   )

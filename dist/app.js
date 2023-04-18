@@ -1,13 +1,14 @@
 "use strict";
 require("./prebundle/vendors-node_modules_taro_weapp_prebundle_react-dom_js.js");
+require("./prebundle/vendors-node_modules_taro_weapp_prebundle_react-virtualized_dist_commonjs_List_js.js");
 require("./prebundle/vendors-node_modules_taro_weapp_prebundle_chunk-5P64A5DQ_js.js");
 require("./prebundle/vendors-node_modules_taro_weapp_prebundle_chunk-JBC2HC5Z_js.js");
 require("./prebundle/vendors-node_modules_taro_weapp_prebundle_tarojs_plugin-framework-react_dist_runtime_js.js");
 require("./prebundle/vendors-node_modules_taro_weapp_prebundle_tarojs_taro_js.js");
 require("./prebundle/vendors-node_modules_taro_weapp_prebundle_chunk-LNJCN3VW_js.js");
 require("./prebundle/vendors-node_modules_taro_weapp_prebundle_tarojs_plugin-platform-weapp_dist_runtime_js.js");
-require("./prebundle/node_modules_taro_weapp_prebundle_tarojs_runtime_js.js");
 require("./prebundle/remoteEntry.js");
+require("./prebundle/node_modules_taro_weapp_prebundle_tarojs_runtime_js.js");
 require("./prebundle/node_modules_taro_weapp_prebundle_react_jsx-runtime_js.js");
 require("./prebundle/node_modules_taro_weapp_prebundle_react_js.js");
 

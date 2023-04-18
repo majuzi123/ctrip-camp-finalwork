@@ -10,7 +10,13 @@ export default function Index() {
   var hasUserInfo = false
   const [hotelName, setHotelName] = useState('');
   const [hotelId, setHotelId] = useState('');
-  let anonymous = false;
+  let anonymous = false;//是否匿名提交点评
+
+  const [cScore, setCScore] = useState(0);
+  const [cText, setCText] = useState('');
+  const [cImgs, setCImgs] = useState([]);
+  const IMG_MAX_COUNT = 9;
+
   useLoad((options) => {
     console.log(options)
     setHotelName(options.hotelName)
@@ -35,11 +41,6 @@ export default function Index() {
       })
     }
   })
-
-  const [cScore, setCScore] = useState(0);
-  const [cText, setCText] = useState('');
-  const [cImgs, setCImgs] = useState([]);
-  const IMG_MAX_COUNT = 9;
 
   //添加点评图片
   const addImg = async () => {

@@ -57,7 +57,7 @@
   width: auto;
   height: 95vh;
 }
-.hotal-list-page .hotel-cards .loading {
+.hotal-list-page .hotel-cards .tips {
   color: rgb(209, 146, 156);
   font-weight: bold;
   -webkit-align-items: center;
