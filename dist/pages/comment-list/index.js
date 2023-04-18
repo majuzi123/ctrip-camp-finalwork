@@ -82,30 +82,99 @@ function Index() {
     _useState6 = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState5, 2),
     index = _useState6[0],
     setIndex = _useState6[1];
-  (0,_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__.useLoad)( /*#__PURE__*/(0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee() {
-    var comments;
-    return (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().wrap(function _callee$(_context) {
-      while (1) switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
-            name: 'get-bad-comment',
-            data: {
-              num: 10,
-              index: index
-            }
-          });
-        case 2:
-          comments = _context.sent.result;
-          console.log(comments);
-          setCommentList(comments);
-          setLoading(false);
-        case 6:
-        case "end":
-          return _context.stop();
-      }
-    }, _callee);
-  })));
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('未知酒店'),
+    _useState8 = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState7, 2),
+    hotelName = _useState8[0],
+    setHotelName = _useState8[1];
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState10 = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState9, 2),
+    hotelId = _useState10[0],
+    setHotelId = _useState10[1];
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState12 = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState11, 2),
+    page = _useState12[0],
+    setPage = _useState12[1];
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState14 = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState13, 2),
+    allcount = _useState14[0],
+    setAllcount = _useState14[1];
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState16 = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState15, 2),
+    photocount = _useState16[0],
+    setPhotocount = _useState16[1];
+  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState18 = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState17, 2),
+    badcount = _useState18[0],
+    setBadcount = _useState18[1];
+  _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().setNavigationBarTitle({
+    title: hotelName
+  });
+  (0,_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__.useLoad)( /*#__PURE__*/function () {
+    var _ref = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee(options) {
+      var comments;
+      return (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            _context.t0 = setAllcount;
+            _context.next = 3;
+            return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
+              name: 'get-comment-list',
+              data: {
+                index: 0
+              }
+            });
+          case 3:
+            _context.t1 = _context.sent.result.total;
+            (0, _context.t0)(_context.t1);
+            _context.t2 = setPhotocount;
+            _context.next = 8;
+            return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
+              name: 'get-comment-list',
+              data: {
+                index: 1
+              }
+            });
+          case 8:
+            _context.t3 = _context.sent.result.total;
+            (0, _context.t2)(_context.t3);
+            _context.t4 = setBadcount;
+            _context.next = 13;
+            return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
+              name: 'get-comment-list',
+              data: {
+                index: 2
+              }
+            });
+          case 13:
+            _context.t5 = _context.sent.result.total;
+            (0, _context.t4)(_context.t5);
+            //console.log(allcount)
+            //console.log(options.hotelName)
+            setHotelName(options.hotelName);
+            setHotelId(options.hotelId);
+            _context.next = 19;
+            return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
+              name: 'get-bad-comment',
+              data: {
+                page: page,
+                index: index
+              }
+            });
+          case 19:
+            comments = _context.sent.result;
+            console.log(comments);
+            setCommentList(comments);
+            setLoading(false);
+          case 23:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function (_x) {
+      return _ref.apply(this, arguments);
+    };
+  }());
   var appendComments = /*#__PURE__*/function () {
     var _ref2 = (0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_Desktop_ctrip_camp_finalwork_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee2() {
       var comments;
@@ -118,16 +187,17 @@ function Index() {
             return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
               name: 'get-bad-comment',
               data: {
-                num: 10,
+                page: page + 1,
                 index: index
               }
             });
           case 4:
             comments = _context2.sent.result;
+            setPage(page + 1);
             console.log(comments);
             setCommentList(CommentsList.concat(comments));
             setLoading(false);
-          case 8:
+          case 9:
           case "end":
             return _context2.stop();
         }
@@ -148,8 +218,8 @@ function Index() {
             return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
               name: 'get-bad-comment',
               data: {
-                num: 10,
-                index: index
+                page: page,
+                index: 0
               }
             });
           case 3:
@@ -178,8 +248,8 @@ function Index() {
             return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
               name: 'get-bad-comment',
               data: {
-                num: 10,
-                index: index
+                page: page,
+                index: 1
               }
             });
           case 3:
@@ -208,8 +278,8 @@ function Index() {
             return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
               name: 'get-bad-comment',
               data: {
-                num: 10,
-                index: index
+                page: page,
+                index: 2
               }
             });
           case 3:
@@ -233,21 +303,24 @@ function Index() {
     className: "hotal-list-page",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
       className: "fenlei",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
         onClick: function onClick() {
           return onClickAll();
         },
-        children: "\u5168\u90E8"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
+        className: index == 0 ? 'shaixuan' : '',
+        children: ["\u5168\u90E8", allcount]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
         onClick: function onClick() {
           return onClickPhoto();
         },
-        children: "\u6709\u56FE\xB7\u89C6\u989151"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
+        className: index == 1 ? 'shaixuan' : '',
+        children: ["\u6709\u56FE\xB7\u89C6\u9891", photocount]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
         onClick: function onClick() {
           return onClickBad();
         },
-        children: "\u5DEE\u8BC42"
+        className: index == 2 ? 'shaixuan' : '',
+        children: ["\u5DEE\u8BC4", badcount]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
         children: "\u7B5B\u9009"
       })]
@@ -268,7 +341,7 @@ function Index() {
       className: "tiaozhuan",
       onClick: function onClick() {
         return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().navigateTo({
-          url: '../comment-submit/index'
+          url: '../comment-submit/index?hotelId=' + hotelId + '&hotelName=' + hotelName
         });
       },
       children: "\u533F\u540D\u70B9\u8BC4"
