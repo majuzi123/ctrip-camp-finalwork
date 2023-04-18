@@ -82,30 +82,8 @@ function Index() {
     _useState6 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState5, 2),
     index = _useState6[0],
     setIndex = _useState6[1];
-  (0,_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__.useLoad)( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee() {
-    var comments;
-    return (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().wrap(function _callee$(_context) {
-      while (1) switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
-            name: 'get-bad-comment',
-            data: {
-              num: 10,
-              index: index
-            }
-          });
-        case 2:
-          comments = _context.sent.result;
-          console.log(comments);
-          setCommentList(comments);
-          setLoading(false);
-        case 6:
-        case "end":
-          return _context.stop();
-      }
-    }, _callee);
-  })));
+
+>>>>>>> master
   var appendComments = /*#__PURE__*/function () {
     var _ref2 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee2() {
       var comments;
@@ -118,16 +96,17 @@ function Index() {
             return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
               name: 'get-bad-comment',
               data: {
-                num: 10,
+                page: page + 1,
                 index: index
               }
             });
           case 4:
             comments = _context2.sent.result;
+            setPage(page + 1);
             console.log(comments);
             setCommentList(CommentsList.concat(comments));
             setLoading(false);
-          case 8:
+          case 9:
           case "end":
             return _context2.stop();
         }
@@ -148,8 +127,8 @@ function Index() {
             return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
               name: 'get-bad-comment',
               data: {
-                num: 10,
-                index: index
+                page: page,
+                index: 0
               }
             });
           case 3:
@@ -178,8 +157,8 @@ function Index() {
             return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
               name: 'get-bad-comment',
               data: {
-                num: 10,
-                index: index
+                page: page,
+                index: 1
               }
             });
           case 3:
@@ -208,8 +187,8 @@ function Index() {
             return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
               name: 'get-bad-comment',
               data: {
-                num: 10,
-                index: index
+                page: page,
+                index: 2
               }
             });
           case 3:
@@ -233,21 +212,24 @@ function Index() {
     className: "hotal-list-page",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
       className: "fenlei",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
         onClick: function onClick() {
           return onClickAll();
         },
-        children: "\u5168\u90E8"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
+        className: index == 0 ? 'shaixuan' : '',
+        children: ["\u5168\u90E8", allcount]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
         onClick: function onClick() {
           return onClickPhoto();
         },
-        children: "\u6709\u56FE\xB7\u89C6\u989151"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
+        className: index == 1 ? 'shaixuan' : '',
+        children: ["\u6709\u56FE\xB7\u89C6\u9891", photocount]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
         onClick: function onClick() {
           return onClickBad();
         },
-        children: "\u5DEE\u8BC42"
+        className: index == 2 ? 'shaixuan' : '',
+        children: ["\u5DEE\u8BC4", badcount]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_9__.View, {
         children: "\u7B5B\u9009"
       })]
@@ -268,7 +250,7 @@ function Index() {
       className: "tiaozhuan",
       onClick: function onClick() {
         return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().navigateTo({
-          url: '../comment-submit/index'
+          url: '../comment-submit/index?hotelId=' + hotelId + '&hotelName=' + hotelName
         });
       },
       children: "\u533F\u540D\u70B9\u8BC4"

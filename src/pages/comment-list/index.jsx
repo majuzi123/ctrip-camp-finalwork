@@ -44,8 +44,24 @@ export default function Index() {
   const [CommentsList, setCommentList] = useState([]);
   const [loading, setLoading] = useState(true)
   const [index, setIndex] = useState(0)
-  useLoad(async () => {
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { num: 10,index:index } })).result
+  const [hotelName, setHotelName] = useState('未知酒店');
+  const [hotelId, setHotelId] = useState('');
+  const [page, setPage] = useState(0);
+  const [allcount, setAllcount] = useState(0);
+  const [photocount, setPhotocount] = useState(0);
+  const [badcount, setBadcount] = useState(0);
+  Taro.setNavigationBarTitle({
+    title: hotelName
+  })
+  useLoad(async (options) => {
+    setAllcount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index:0 } })).result.total)
+    setPhotocount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index:1 } })).result.total)
+    setBadcount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index:2 } })).result.total)
+    //console.log(allcount)
+    //console.log(options.hotelName)
+    setHotelName(options.hotelName)
+    setHotelId(options.hotelId)
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page,index:index } })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
@@ -54,8 +70,8 @@ export default function Index() {
   const appendComments = async () => {
     setLoading(true)
     console.log(index)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { num: 10, index:index} })).result
-    
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page+1, index:index} })).result
+    setPage(page+1)
    
     console.log(comments)
     setCommentList(CommentsList.concat(comments))
@@ -63,7 +79,7 @@ export default function Index() {
   }
   const onClickAll = async() => {
     setIndex(0)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { num: 10,index:index } })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page,index:0 } })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
@@ -71,7 +87,7 @@ export default function Index() {
   }
   const onClickPhoto = async() => {
     setIndex(1)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { num: 10,index:index } })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page,index:1 } })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
@@ -79,7 +95,7 @@ export default function Index() {
   }
   const onClickBad = async () => {
     setIndex(2)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { num: 10,index:index } })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page,index:2 } })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
@@ -89,9 +105,9 @@ export default function Index() {
   return (
     <View className='hotal-list-page'>
       <View className='fenlei'>
-        <View onClick={() => onClickAll()}>全部</View>
-        <View onClick={() => onClickPhoto()}>有图·视频51</View>
-        <View onClick={() => onClickBad()}>差评2</View>
+        <View onClick={() => onClickAll()} className={ index==0 ? 'shaixuan' : '' }>全部{allcount}</View>
+        <View onClick={() => onClickPhoto()} className={ index==1 ? 'shaixuan' : '' }>有图·视频{photocount}</View>
+        <View onClick={() => onClickBad()} className={ index==2 ? 'shaixuan' : '' }>差评{badcount}</View>
         <View>筛选</View>
       </View>
       <ScrollView className='hotel-cards' scrollY onScrollToLower={(appendComments)}>
@@ -100,7 +116,7 @@ export default function Index() {
       ))}
        <View className='loading' hidden={loading}>正在加载评论数据...</View>
       </ScrollView>
-      <Button className='tiaozhuan' onClick={() => Taro.navigateTo({ url: '../comment-submit/index' })}>匿名点评</Button>
+      <Button className='tiaozhuan' onClick={() => Taro.navigateTo({ url: '../comment-submit/index?hotelId=' + hotelId + '&hotelName=' + hotelName })}>匿名点评</Button>
     </View>
   )
 

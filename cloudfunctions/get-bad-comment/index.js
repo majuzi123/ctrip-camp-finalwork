@@ -14,7 +14,7 @@ exports.main = async (data) => {
     else if(data.index==1){
         var res = await db.collection('comment').orderBy('liveTime','desc').where({
             pass: true,
-            imgList: _.neq([])
+            ImgList: _.neq([])
           }).get()
         }
     else{
@@ -31,8 +31,8 @@ exports.main = async (data) => {
     // if (arr.length > data.num) {s
     //     return arr.slice(0, data.num)
     // }
-    if (res.length > data.num) {
-        return res.slice(0, data.num)
+    if (res.length > 10) {
+        return res.slice(data.page*10, (data.page+1)*10-1)
     }
     return res.data
 }
