@@ -5,10 +5,11 @@ import StarsScore from '../../components/StarsScore';
 
 // {/* This is a hotel card, component of hotel list page. */}
 export default function HotelCard({
-    hotelDetails
+    hotelDetails,
+    onClick
 }) {
     return (
-        <View className='hotel-card'>
+        <View className='hotel-card' onClick={onClick}>
             <View className='card-left'>
                 <Image className='hotel-image' src={hotelDetails.image} lazyLoad></Image>
             </View>

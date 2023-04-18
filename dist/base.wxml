@@ -65,6 +65,14 @@
   </button>
 </template>
 
+<template name="tmpl_0_18">
+  <checkbox value="{{i.p4}}" disabled="{{i.p2}}" checked="{{xs.b(i.p0,!1)}}" color="{{xs.b(i.p1,'#09BB07')}}" name="{{i.p3}}" style="{{i.st}}" class="{{i.cl}}" bindtap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block wx:for="{{i.cn}}" wx:key="sid">
+      <template is="{{xs.e(cid+1)}}" data="{{i:item,l:l}}" />
+    </block>
+  </checkbox>
+</template>
+
 <template name="tmpl_0_26">
   <template is="{{xs.c(i, 'tmpl_0_')}}" data="{{i:i}}" />
 </template>
