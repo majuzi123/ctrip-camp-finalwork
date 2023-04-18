@@ -6,7 +6,7 @@
   "appid": "wxec56979112c24ee2",
   "compileType": "miniprogram",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": false,
     "enhance": false,
     "postcss": false,

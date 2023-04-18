@@ -41,6 +41,7 @@
 
 
 function Index() {
+  var hasUserInfo = false;
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
     _useState2 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState, 2),
     hotelName = _useState2[0],
@@ -49,39 +50,7 @@ function Index() {
     _useState4 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState3, 2),
     hotelId = _useState4[0],
     setHotelId = _useState4[1];
-  var anonymous = false;
-  (0,_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__.useLoad)(function (options) {
-    console.log(options);
-    setHotelName(options.hotelName);
-    setHotelId(options.hotelId);
-    // if (!global.city) {
-    //   global.city = '未知属地'
-    //   Taro.request({
-    //     url: 'https://whois.pconline.com.cn/ipJson.jsp?json=true', //请求地址信息,当前ip属地
-    //     header: {
-    //       'content-type': 'application/json'
-    //     },
-    //     success: function (res) {
-    //       global.city = res.data.pro + '-' + res.data.city;
-    //       console.log(global.city)
-    //     }
-    //   })
-    // }
-    if (!__webpack_require__.g.userInfo) {
-      __webpack_require__.g.userInfo = {};
-      _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().getUserInfo({
-        success: function success(res) {
-          __webpack_require__.g.userInfo = res.userInfo;
-          // var nickName = userInfo.nickName
-          // var avatarUrl = userInfo.avatarUrl
-          // var gender = userInfo.gender //性别 0：未知、1：男、2：女
-          // var province = userInfo.province
-          // var city = userInfo.city
-          // var country = userInfo.country
-        }
-      });
-    }
-  });
+  var anonymous = false; //是否匿名提交点评
 
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
     _useState6 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState5, 2),
@@ -96,6 +65,33 @@ function Index() {
     cImgs = _useState10[0],
     setCImgs = _useState10[1];
   var IMG_MAX_COUNT = 9;
+  (0,_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__.useLoad)(function (options) {
+    console.log(options);
+    setHotelName(options.hotelName);
+    setHotelId(options.hotelId);
+
+    //请求地址信息,当前ip属地
+    if (!__webpack_require__.g.city) {
+      __webpack_require__.g.city = '未知属地';
+      _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().request({
+        url: 'https://whois.pconline.com.cn/ipJson.jsp?json=true',
+        header: {
+          'content-type': 'application/json'
+        },
+        success: function success(res) {
+          if (res.data.pro == res.data.city) {
+            //直辖市
+            __webpack_require__.g.city = res.data.city;
+          } else {
+            __webpack_require__.g.city = res.data.pro + ' ' + res.data.city;
+          }
+          console.log(city);
+        }
+      });
+    }
+  });
+
+  //添加点评图片
   var addImg = /*#__PURE__*/function () {
     var _ref = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee() {
       var imgs, res, _iterator, _step, path, cloudPath;
@@ -165,15 +161,27 @@ function Index() {
     }
     setCImgs(newCImg);
   };
+
+  //点击提交点评后的操作
   var submitComment = /*#__PURE__*/function () {
     var _ref2 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee2() {
       return (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().wrap(function _callee2$(_context2) {
         while (1) switch (_context2.prev = _context2.next) {
           case 0:
             console.log("clicked submit");
-            console.log(userInfo);
+            if (!(!anonymous && !hasUserInfo)) {
+              _context2.next = 4;
+              break;
+            }
+            _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showToast({
+              title: '请匿名点评',
+              icon: 'error',
+              duration: 1000
+            });
+            return _context2.abrupt("return");
+          case 4:
             if (!(cScore == 0)) {
-              _context2.next = 5;
+              _context2.next = 7;
               break;
             }
             _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showToast({
@@ -182,9 +190,9 @@ function Index() {
               duration: 1000
             });
             return _context2.abrupt("return");
-          case 5:
+          case 7:
             if (!(cText.length < 5)) {
-              _context2.next = 8;
+              _context2.next = 10;
               break;
             }
             _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showToast({
@@ -193,7 +201,7 @@ function Index() {
               duration: 1000
             });
             return _context2.abrupt("return");
-          case 8:
+          case 10:
             _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showModal({
               title: '确认提交评价？',
               success: function success(res) {
@@ -208,7 +216,7 @@ function Index() {
                       hotelName: hotelName ? hotelName : '未知酒店',
                       hotelId: hotelId ? hotelId : '00000',
                       liveTime: new Date().valueOf(),
-                      location: userInfo.province && userInfo.city ? userInfo.province + ' ' + userInfo.city : '未知属地',
+                      location: city ? city : '未知属地',
                       nickname: !anonymous && userInfo.nickName ? userInfo.nickName : '匿名用户',
                       userImg: !anonymous && userInfo.avatarUrl ? userInfo.avatarUrl : 'https://pic.imgdb.cn/item/64395c040d2dde5777264e41.jpg',
                       star: cScore,
@@ -238,7 +246,7 @@ function Index() {
                 }
               }
             });
-          case 9:
+          case 11:
           case "end":
             return _context2.stop();
         }

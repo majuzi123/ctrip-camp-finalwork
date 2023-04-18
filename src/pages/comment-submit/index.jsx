@@ -7,47 +7,42 @@ import FlagSelector from '../../components/flagSelector';
 import IconFont from '../../components/iconfont';
 
 export default function Index() {
+  var hasUserInfo = false
   const [hotelName, setHotelName] = useState('');
   const [hotelId, setHotelId] = useState('');
-  let anonymous = false;
-  useLoad((options) => {
-    console.log(options)
-    setHotelName(options.hotelName)
-    setHotelId(options.hotelId)
-    // if (!global.city) {
-    //   global.city = '未知属地'
-    //   Taro.request({
-    //     url: 'https://whois.pconline.com.cn/ipJson.jsp?json=true', //请求地址信息,当前ip属地
-    //     header: {
-    //       'content-type': 'application/json'
-    //     },
-    //     success: function (res) {
-    //       global.city = res.data.pro + '-' + res.data.city;
-    //       console.log(global.city)
-    //     }
-    //   })
-    // }
-    if (!global.userInfo) {
-      global.userInfo = {}
-      Taro.getUserInfo({
-        success: function (res) {
-          global.userInfo = res.userInfo
-          // var nickName = userInfo.nickName
-          // var avatarUrl = userInfo.avatarUrl
-          // var gender = userInfo.gender //性别 0：未知、1：男、2：女
-          // var province = userInfo.province
-          // var city = userInfo.city
-          // var country = userInfo.country
-        }
-      })
-    }
-  })
+  let anonymous = false;//是否匿名提交点评
 
   const [cScore, setCScore] = useState(0);
   const [cText, setCText] = useState('');
   const [cImgs, setCImgs] = useState([]);
   const IMG_MAX_COUNT = 9;
 
+  useLoad((options) => {
+    console.log(options)
+    setHotelName(options.hotelName)
+    setHotelId(options.hotelId)
+
+    //请求地址信息,当前ip属地
+    if (!global.city) {
+      global.city = '未知属地'
+      Taro.request({
+        url: 'https://whois.pconline.com.cn/ipJson.jsp?json=true',
+        header: {
+          'content-type': 'application/json'
+        },
+        success: function (res) {
+          if (res.data.pro == res.data.city) {//直辖市
+            global.city = res.data.city
+          } else {
+            global.city = res.data.pro + ' ' + res.data.city;
+          }
+          console.log(city)
+        }
+      })
+    }
+  })
+
+  //添加点评图片
   const addImg = async () => {
     console.log("addImg")
     var imgs = [...cImgs]
@@ -74,9 +69,13 @@ export default function Index() {
     setCImgs(newCImg)
   }
 
+  //点击提交点评后的操作
   const submitComment = async () => {
     console.log("clicked submit")
-    console.log(userInfo)
+    if (!anonymous && !hasUserInfo) {
+      Taro.showToast({ title: '请匿名点评', icon: 'error', duration: 1000 })
+      return;
+    }
     if (cScore == 0) {
       Taro.showToast({ title: '请先评分', icon: 'error', duration: 1000 })
       return;
@@ -99,7 +98,7 @@ export default function Index() {
               hotelName: hotelName ? hotelName : '未知酒店',
               hotelId: hotelId ? hotelId : '00000',
               liveTime: new Date().valueOf(),
-              location: userInfo.province && userInfo.city ? userInfo.province + ' ' + userInfo.city : '未知属地',
+              location: city ? city : '未知属地',
               nickname: !anonymous && userInfo.nickName ? userInfo.nickName : '匿名用户',
               userImg: !anonymous && userInfo.avatarUrl ? userInfo.avatarUrl : 'https://pic.imgdb.cn/item/64395c040d2dde5777264e41.jpg',
               star: cScore,
