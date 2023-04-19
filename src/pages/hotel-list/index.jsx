@@ -10,6 +10,7 @@ export default function Index() {
   const [hotelsList, setHotelList] = useState([])
   const [searchContent, setSearchContent] = useState('') //搜索框内容
   const [range, setRange] = useState(['不限评分', '不限评价数', '不限价格'])
+  const [scroll, setScroll] = useState(1)//滚动条高度，用于回到顶部
   //想要修改筛选条件后立即更改页面信息，useState的set操作在请求数据之后执行，所以需要一个可以立即改变值的临时变量
   var tempRange = ['不限评分', '不限评价数', '不限价格']
   const rangeScore = ['不限评分', '1分以上', '2分以上', '3分以上', '4分以上', '4.5分以上', '5分']
@@ -26,6 +27,7 @@ export default function Index() {
     tempRange[index] = content
     setRange(tempRange)
     refreshHotels()//重修请求符合条件的数据
+    setScroll((scroll + 1 - Math.random()) % 1)//回滚至顶部，state值发生改变才会触发
   }
 
   //点击搜索按钮后触发，搜索含有关键字的酒店
@@ -108,7 +110,7 @@ export default function Index() {
           <View className='search-icon' onClick={doSearch}><IconFont name='chazhao' size='50rpx' /></View>
         </View>
       </View>
-      <ScrollView className='hotel-cards' scrollY onScrollToLower={(appendHotels)}>
+      <ScrollView className='hotel-cards' scrollY onScrollToLower={(appendHotels)} scrollTop={scroll}>
         {Array.isArray(hotelsList) && hotelsList.map((item) => (
           <HotelCard hotelDetails={item} onClick={() => (Taro.navigateTo({
             // url: '../comment-submit/index?hotelId=' + item._id + '&hotelName=' + item.name
