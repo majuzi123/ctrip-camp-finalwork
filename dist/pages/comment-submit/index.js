@@ -10,25 +10,18 @@
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ Index; }
 /* harmony export */ });
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js */ "./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js");
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js */ "./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js");
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js */ "./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js");
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "webpack/container/remote/react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
+/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
 /* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @tarojs/taro */ "webpack/container/remote/@tarojs/taro");
 /* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_flagSelector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/flagSelector */ "./src/components/flagSelector/index.jsx");
-/* harmony import */ var _components_iconfont__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/iconfont */ "./src/components/iconfont/index.weapp.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
-
-
-
+/* harmony import */ var _components_ScoreChecker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/ScoreChecker */ "./src/components/ScoreChecker/index.jsx");
+/* harmony import */ var _components_ImageAdder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/ImageAdder */ "./src/components/ImageAdder/index.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
@@ -41,36 +34,34 @@
 
 
 function Index() {
-  var hasUserInfo = false;
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-    _useState2 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState, 2),
+    _useState2 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_5__["default"])(_useState, 2),
     hotelName = _useState2[0],
     setHotelName = _useState2[1];
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-    _useState4 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState3, 2),
+    _useState4 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_5__["default"])(_useState3, 2),
     hotelId = _useState4[0],
     setHotelId = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState6 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_5__["default"])(_useState5, 2),
+    cScore = _useState6[0],
+    setCScore = _useState6[1]; //评分
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState8 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_5__["default"])(_useState7, 2),
+    cText = _useState8[0],
+    setCText = _useState8[1]; //文字评论
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+    _useState10 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_5__["default"])(_useState9, 2),
+    cImgs = _useState10[0],
+    setCImgs = _useState10[1]; //评论图片
   var anonymous = false; //是否匿名提交点评
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
-    _useState6 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState5, 2),
-    cScore = _useState6[0],
-    setCScore = _useState6[1];
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-    _useState8 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState7, 2),
-    cText = _useState8[0],
-    setCText = _useState8[1];
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
-    _useState10 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState9, 2),
-    cImgs = _useState10[0],
-    setCImgs = _useState10[1];
-  var IMG_MAX_COUNT = 9;
   (0,_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__.useLoad)(function (options) {
     console.log(options);
     setHotelName(options.hotelName);
     setHotelId(options.hotelId);
 
-    //请求地址信息,当前ip属地
+    //请求地址信息,获取评论时的ip属地
     if (!__webpack_require__.g.city) {
       __webpack_require__.g.city = '未知属地';
       _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().request({
@@ -91,97 +82,27 @@ function Index() {
     }
   });
 
-  //添加点评图片
-  var addImg = /*#__PURE__*/function () {
-    var _ref = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee() {
-      var imgs, res, _iterator, _step, path, cloudPath;
-      return (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().wrap(function _callee$(_context) {
-        while (1) switch (_context.prev = _context.next) {
-          case 0:
-            console.log("addImg");
-            imgs = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_9__["default"])(cImgs);
-            _context.next = 4;
-            return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().chooseImage({
-              count: IMG_MAX_COUNT - cImgs.length,
-              sizeType: ['compressed']
-            });
-          case 4:
-            res = _context.sent;
-            _iterator = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_10__["default"])(res.tempFilePaths);
-            _context.prev = 6;
-            _iterator.s();
-          case 8:
-            if ((_step = _iterator.n()).done) {
-              _context.next = 15;
-              break;
-            }
-            path = _step.value;
-            cloudPath = 'comment-img/' + Date.now() + Math.floor(Math.random() * 10000) + '.jpg';
-            _context.next = 13;
-            return _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.uploadFile({
-              cloudPath: cloudPath,
-              filePath: path
-            }).then(function (res) {
-              imgs.push(res.fileID);
-            });
-          case 13:
-            _context.next = 8;
-            break;
-          case 15:
-            _context.next = 20;
-            break;
-          case 17:
-            _context.prev = 17;
-            _context.t0 = _context["catch"](6);
-            _iterator.e(_context.t0);
-          case 20:
-            _context.prev = 20;
-            _iterator.f();
-            return _context.finish(20);
-          case 23:
-            setCImgs(imgs);
-          case 24:
-          case "end":
-            return _context.stop();
-        }
-      }, _callee, null, [[6, 17, 20, 23]]);
-    }));
-    return function addImg() {
-      return _ref.apply(this, arguments);
-    };
-  }();
-  var deleteImg = function deleteImg(index) {
-    console.log("deleteImg" + index);
-    var imgs = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_9__["default"])(cImgs);
-    var newCImg = [];
-    for (var i = 0; i < imgs.length; i++) {
-      if (i != index) {
-        newCImg.push(imgs[i]);
-      }
-    }
-    setCImgs(newCImg);
-  };
-
   //点击提交点评后的操作
   var submitComment = /*#__PURE__*/function () {
-    var _ref2 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_7__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().mark(function _callee2() {
-      return (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_8__["default"])().wrap(function _callee2$(_context2) {
-        while (1) switch (_context2.prev = _context2.next) {
+    var _ref = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_6__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_7__["default"])().mark(function _callee() {
+      return (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_7__["default"])().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
           case 0:
             console.log("clicked submit");
-            if (!(!anonymous && !hasUserInfo)) {
-              _context2.next = 4;
+            if (anonymous) {
+              _context.next = 4;
               break;
             }
+            //暂时只实现匿名评论
             _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showToast({
               title: '请匿名点评',
               icon: 'error',
               duration: 1000
             });
-            return _context2.abrupt("return");
+            return _context.abrupt("return");
           case 4:
             if (!(cScore == 0)) {
-              _context2.next = 7;
+              _context.next = 7;
               break;
             }
             _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showToast({
@@ -189,10 +110,10 @@ function Index() {
               icon: 'error',
               duration: 1000
             });
-            return _context2.abrupt("return");
+            return _context.abrupt("return");
           case 7:
             if (!(cText.length < 5)) {
-              _context2.next = 10;
+              _context.next = 10;
               break;
             }
             _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showToast({
@@ -200,7 +121,7 @@ function Index() {
               icon: 'error',
               duration: 1000
             });
-            return _context2.abrupt("return");
+            return _context.abrupt("return");
           case 10:
             _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showModal({
               title: '确认提交评价？',
@@ -212,17 +133,23 @@ function Index() {
                   });
                   _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().cloud.callFunction({
                     name: 'submit-comment',
+                    //提交点评至数据库
                     data: {
                       hotelName: hotelName ? hotelName : '未知酒店',
                       hotelId: hotelId ? hotelId : '00000',
                       liveTime: new Date().valueOf(),
+                      //当前点评时间
                       location: city ? city : '未知属地',
+                      //当前所处城市
                       nickname: !anonymous && userInfo.nickName ? userInfo.nickName : '匿名用户',
                       userImg: !anonymous && userInfo.avatarUrl ? userInfo.avatarUrl : 'https://pic.imgdb.cn/item/64395c040d2dde5777264e41.jpg',
                       star: cScore,
+                      //评分
                       content: cText,
+                      //文字评价
                       ImgList: cImgs,
-                      pass: null
+                      //图片
+                      pass: null //审核状态，null未审核，true通过，false拒绝
                     }
                   }).then(function (res) {
                     _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().hideLoading();
@@ -248,98 +175,278 @@ function Index() {
             });
           case 11:
           case "end":
-            return _context2.stop();
+            return _context.stop();
         }
-      }, _callee2);
+      }, _callee);
     }));
     return function submitComment() {
-      return _ref2.apply(this, arguments);
+      return _ref.apply(this, arguments);
     };
   }();
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
     className: "comment-submit-page",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
       className: "hotel-name",
       children: hotelName
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
-      className: "comment-score",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.Text, {
-        className: "score-title",
-        children: "\u8BC4\u5206\uFF1A"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
-        className: "stars",
-        children: [1, 2, 3, 4, 5].map(function (value) {
-          var colour = value <= cScore ? 'yellow' : "#ccc";
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
-            onClick: function onClick() {
-              setCScore(value);
-            },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_iconfont__WEBPACK_IMPORTED_MODULE_4__["default"], {
-              className: "star",
-              name: "a-1",
-              color: colour,
-              size: "60rpx"
-            })
-          });
-        })
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_ScoreChecker__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      title: '评分：',
+      starSize: '60rpx',
+      scoreState: [cScore, setCScore]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
       className: "comment-text",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.Text, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.Text, {
         className: "text-tips1",
         children: cText == '' ? '欢迎你分享对酒店服务、环境、设施和价格等的评价...' : ''
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.Textarea, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.Textarea, {
         className: "text-content",
         value: cText,
         type: "text",
         onInput: function onInput(e) {
           setCText(e.target.value);
         }
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
         className: "text-tips2",
         children: "\u81F3\u5C115\u4E2A\u5B57"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
-      className: "comment-imgs",
-      children: [cImgs.map(function (src, index) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
-          className: "img-container",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.Image, {
-            src: src,
-            className: "comment-img"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
-            className: "delete-btn",
-            onClick: function onClick() {
-              deleteImg(index);
-            },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_iconfont__WEBPACK_IMPORTED_MODULE_4__["default"], {
-              name: "times-circle-fill",
-              size: "32rpx",
-              color: "red"
-            })
-          })]
-        });
-      }), cImgs.length < IMG_MAX_COUNT && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.View, {
-        className: "img-container",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.Image, {
-          src: "https://pic.imgdb.cn/item/6434ffef0d2dde577737f3bf.jpg",
-          className: "comment-img",
-          onClick: addImg
-        })
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.Checkbox, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_ImageAdder__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      IMG_MAX_COUNT: 9,
+      uploadToCloud: true,
+      imgsState: [cImgs, setCImgs]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.Checkbox, {
       className: "anonymous-check",
       onClick: function onClick() {
         anonymous = !anonymous;
         console.log(anonymous);
       },
       children: "\u533F\u540D\u8BC4\u8BBA"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_11__.Button, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.Button, {
       className: "submit-btn",
       onClick: submitComment,
       children: "\u63D0\u4EA4"
     })]
   });
+}
+
+/***/ }),
+
+/***/ "./src/components/ImageAdder/index.jsx":
+/*!*********************************************!*\
+  !*** ./src/components/ImageAdder/index.jsx ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ ImageAdder; }
+/* harmony export */ });
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js */ "./node_modules/@babel/runtime/helpers/esm/regeneratorRuntime.js");
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js */ "./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js");
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
+/* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tarojs/taro */ "webpack/container/remote/@tarojs/taro");
+/* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_tarojs_taro__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _iconfont__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../iconfont */ "./src/components/iconfont/index.weapp.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+
+
+
+
+
+// {/* 选择并添加图片 */}
+
+
+function ImageAdder(_ref) {
+  var IMG_MAX_COUNT = _ref.IMG_MAX_COUNT,
+    uploadToCloud = _ref.uploadToCloud,
+    imgsState = _ref.imgsState;
+  return function (IMG_MAX_COUNT) {
+    if (!IMG_MAX_COUNT) {
+      var IMG_MAX_COUNT = 9;
+    }
+    var _imgsState = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_3__["default"])(imgsState, 2),
+      cImgs = _imgsState[0],
+      setCImgs = _imgsState[1]; //评论图片路径数组
+
+    //添加点评图片
+    var addImg = /*#__PURE__*/function () {
+      var _ref2 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_4__["default"])( /*#__PURE__*/(0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_5__["default"])().mark(function _callee() {
+        var imgs, res, _iterator, _step, path, cloudPath;
+        return (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_5__["default"])().wrap(function _callee$(_context) {
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              console.log("addImg");
+              imgs = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(cImgs);
+              _context.next = 4;
+              return _tarojs_taro__WEBPACK_IMPORTED_MODULE_0___default().chooseImage({
+                count: IMG_MAX_COUNT - cImgs.length,
+                sizeType: ['compressed']
+              });
+            case 4:
+              res = _context.sent;
+              if (!(uploadToCloud && uploadToCloud === true)) {
+                _context.next = 26;
+                break;
+              }
+              _iterator = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_7__["default"])(res.tempFilePaths);
+              _context.prev = 7;
+              _iterator.s();
+            case 9:
+              if ((_step = _iterator.n()).done) {
+                _context.next = 16;
+                break;
+              }
+              path = _step.value;
+              cloudPath = 'comment-img/' + Date.now() + Math.floor(Math.random() * 10000) + '.jpg';
+              _context.next = 14;
+              return _tarojs_taro__WEBPACK_IMPORTED_MODULE_0___default().cloud.uploadFile({
+                cloudPath: cloudPath,
+                filePath: path
+              }).then(
+              //图片上传
+              function (res) {
+                imgs.push(res.fileID);
+              });
+            case 14:
+              _context.next = 9;
+              break;
+            case 16:
+              _context.next = 21;
+              break;
+            case 18:
+              _context.prev = 18;
+              _context.t0 = _context["catch"](7);
+              _iterator.e(_context.t0);
+            case 21:
+              _context.prev = 21;
+              _iterator.f();
+              return _context.finish(21);
+            case 24:
+              _context.next = 27;
+              break;
+            case 26:
+              imgs.push(res.tempFilePaths);
+            case 27:
+              setCImgs(imgs);
+            case 28:
+            case "end":
+              return _context.stop();
+          }
+        }, _callee, null, [[7, 18, 21, 24]]);
+      }));
+      return function addImg() {
+        return _ref2.apply(this, arguments);
+      };
+    }();
+
+    //删除指定的已添加的点评图片
+    var deleteImg = function deleteImg(index) {
+      console.log("deleteImg" + index);
+      var imgs = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_6__["default"])(cImgs);
+      var newCImg = [];
+      for (var i = 0; i < imgs.length; i++) {
+        if (i != index) {
+          newCImg.push(imgs[i]);
+        }
+      }
+      setCImgs(newCImg);
+    };
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
+      className: "image-adder-container",
+      children: [cImgs.map(function (src, index) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
+          className: "img-container",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.Image, {
+            src: src,
+            className: "comment-img"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
+            className: "delete-btn",
+            onClick: function onClick() {
+              deleteImg(index);
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_iconfont__WEBPACK_IMPORTED_MODULE_1__["default"], {
+              name: "times-circle-fill",
+              size: "32rpx",
+              color: "red"
+            })
+          })]
+        });
+      }), cImgs.length < IMG_MAX_COUNT && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
+        className: "img-container",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.Image, {
+          src: "https://pic.imgdb.cn/item/6434ffef0d2dde577737f3bf.jpg",
+          className: "comment-img",
+          onClick: addImg
+        })
+      })]
+    });
+  }(IMG_MAX_COUNT);
+}
+
+/***/ }),
+
+/***/ "./src/components/ScoreChecker/index.jsx":
+/*!***********************************************!*\
+  !*** ./src/components/ScoreChecker/index.jsx ***!
+  \***********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ ScoreChecker; }
+/* harmony export */ });
+/* harmony import */ var D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
+/* harmony import */ var _iconfont__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../iconfont */ "./src/components/iconfont/index.weapp.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+// {/* 选择评分组件 */}
+
+
+function ScoreChecker(_ref) {
+  var starSize = _ref.starSize,
+    fontSize = _ref.fontSize,
+    scoreState = _ref.scoreState,
+    title = _ref.title;
+  return function (starSize) {
+    var _scoreState = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_2__["default"])(scoreState, 2),
+      cScore = _scoreState[0],
+      setCScore = _scoreState[1];
+    if (!starSize) {
+      var starSize = '48rpx';
+    }
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
+      className: "score-checker-container",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.Text, {
+        className: "score-title",
+        children: title
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
+        className: "stars",
+        children: [1, 2, 3, 4, 5].map(function (value) {
+          var colour = value <= cScore ? 'yellow' : "#ccc";
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
+            onClick: function onClick() {
+              setCScore(value);
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_iconfont__WEBPACK_IMPORTED_MODULE_0__["default"], {
+              className: "star",
+              name: "a-1",
+              color: colour,
+              size: starSize
+            })
+          });
+        })
+      })]
+    });
+  }(starSize);
 }
 
 /***/ }),

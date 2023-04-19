@@ -13,7 +13,7 @@ export default function StarsScore({
         starSize = defaultSize
     }
     return (
-        <View className='container'>
+        <View className='stars-score-container'>
             <View className='back'>
                 {[1, 2, 3, 4, 5].map(() => (
                     <IconFont className='star' name='a-1' color="#aaa" size={starSize + "rpx"} />))}

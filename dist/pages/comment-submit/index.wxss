@@ -12,22 +12,6 @@
   margin-bottom: 30rpx;
   font-weight: bolder;
 }
-.comment-submit-page .comment-score {
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 48rpx;
-  text-align: center;
-  margin-bottom: 30rpx;
-}
-.comment-submit-page .comment-score .stars {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
 .comment-submit-page .comment-text {
   position: relative;
   margin-bottom: 30rpx;
@@ -53,30 +37,6 @@
   right: 20rpx;
   font-size: smaller;
 }
-.comment-submit-page .comment-imgs {
-  display: inline;
-  margin-bottom: 30rpx;
-  width: 700rpx;
-}
-.comment-submit-page .comment-imgs .img-container {
-  display: inline-block;
-  position: relative;
-  width: 180rpx;
-  height: 180rpx;
-  margin: 10rpx 10rpx;
-}
-.comment-submit-page .comment-imgs .img-container .comment-img {
-  width: 100%;
-  height: 100%;
-  border: 2rpx solid #ddd;
-  border-radius: 16rpx;
-  overflow: hidden;
-}
-.comment-submit-page .comment-imgs .img-container .delete-btn {
-  position: absolute;
-  top: -10rpx;
-  right: -20rpx;
-}
 .comment-submit-page .anonymous-check {
   width: 100%;
   text-align: right;
@@ -84,4 +44,51 @@
 }
 .comment-submit-page .submit-btn {
   margin-bottom: 30rpx;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/ScoreChecker/index.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.score-checker-container {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 48rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.score-checker-container .stars {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/ImageAdder/index.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.image-adder-container {
+  display: inline;
+  margin-bottom: 30rpx;
+  width: 700rpx;
+}
+.image-adder-container .img-container {
+  display: inline-block;
+  position: relative;
+  width: 180rpx;
+  height: 180rpx;
+  margin: 10rpx 10rpx;
+}
+.image-adder-container .img-container .comment-img {
+  width: 100%;
+  height: 100%;
+  border: 2rpx solid #ddd;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+.image-adder-container .img-container .delete-btn {
+  position: absolute;
+  top: -10rpx;
+  right: -20rpx;
 }
