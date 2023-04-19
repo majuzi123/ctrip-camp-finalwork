@@ -283,7 +283,7 @@ function Index() {
 
 
 
-// {/* This is a hotel card, component of hotel list page. */}
+// {/* 酒店卡片 */}
 
 
 function HotelCard(_ref) {

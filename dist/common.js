@@ -32,7 +32,7 @@ function StarsScore(_ref) {
     starSize = defaultSize;
   }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
-    className: "container",
+    className: "stars-score-container",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
       className: "back",
       children: [1, 2, 3, 4, 5].map(function () {

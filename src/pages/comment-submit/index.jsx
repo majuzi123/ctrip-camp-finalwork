@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { View, Text, Button, Checkbox, Image, Textarea } from '@tarojs/components'
+import { View, Text, Button, Checkbox, Textarea } from '@tarojs/components'
 import Taro, { useLoad } from '@tarojs/taro';
 import './index.scss'
-import IconFont from '../../components/iconfont';
+import ScoreChecker from '../../components/ScoreChecker';
+import ImageAdder from '../../components/ImageAdder';
 
 export default function Index() {
   const [hotelName, setHotelName] = useState('');
@@ -10,7 +11,6 @@ export default function Index() {
   const [cScore, setCScore] = useState(0);//评分
   const [cText, setCText] = useState('');//文字评论
   const [cImgs, setCImgs] = useState([]);//评论图片
-  const IMG_MAX_COUNT = 9;//评论图片最大数量
   let anonymous = false;//是否匿名提交点评
 
   useLoad((options) => {
@@ -37,35 +37,6 @@ export default function Index() {
       })
     }
   })
-
-  //添加点评图片
-  const addImg = async () => {
-    console.log("addImg")
-    var imgs = [...cImgs]
-    const res = await Taro.chooseImage({ count: IMG_MAX_COUNT - cImgs.length, sizeType: ['compressed'] })
-    for (let path of res.tempFilePaths) {
-      let cloudPath = 'comment-img/' + Date.now() + Math.floor(Math.random() * 10000) + '.jpg';
-      await Taro.cloud.uploadFile({ cloudPath: cloudPath, filePath: path }).then(//图片上传
-        (res) => {
-          imgs.push(res.fileID)
-        }
-      )
-    }
-    setCImgs(imgs)
-  }
-
-  //删除指定的已添加的点评图片
-  const deleteImg = (index) => {
-    console.log("deleteImg" + index)
-    var imgs = [...cImgs]
-    var newCImg = []
-    for (let i = 0; i < imgs.length; i++) {
-      if (i != index) {
-        newCImg.push(imgs[i])
-      }
-    }
-    setCImgs(newCImg)
-  }
 
   //点击提交点评后的操作
   const submitComment = async () => {
@@ -123,15 +94,7 @@ export default function Index() {
 
       <View className='hotel-name'>{hotelName}</View>
 
-      <View className='comment-score'>
-        <Text className='score-title'>评分：</Text>
-        <View className='stars'>{[1, 2, 3, 4, 5].map((value) => {
-          let colour = value <= cScore ? 'yellow' : "#ccc"
-          return (<View onClick={() => { setCScore(value) }} >
-            <IconFont className='star' name='a-1' color={colour} size="60rpx" />
-          </View>)
-        })}</View>
-      </View>
+      <ScoreChecker title={'评分：'} starSize={'60rpx'} scoreState={[cScore, setCScore]} />
 
       <View className='comment-text'>
         <Text className='text-tips1'>{cText == '' ? '欢迎你分享对酒店服务、环境、设施和价格等的评价...' : ''}</Text>
@@ -139,23 +102,10 @@ export default function Index() {
         <View className='text-tips2'>至少5个字</View>
       </View>
 
-      <View className='comment-imgs'>
-        {cImgs.map((src, index) => (
-          <View className='img-container'>
-            <Image src={src} className='comment-img'></Image>
-            <View className='delete-btn' onClick={() => { deleteImg(index) }}>
-              <IconFont name='times-circle-fill' size='32rpx' color='red'></IconFont>
-            </View>
-          </View>
-        ))}
-
-        {cImgs.length < IMG_MAX_COUNT && <View className='img-container'>
-          {/* 触发添加点评图片的加号图片 */}
-          <Image src='https://pic.imgdb.cn/item/6434ffef0d2dde577737f3bf.jpg' className='comment-img' onClick={addImg} />
-        </View>}
-      </View>
+      <ImageAdder IMG_MAX_COUNT={9} uploadToCloud={true} imgsState={[cImgs, setCImgs]} />
 
       <Checkbox className='anonymous-check' onClick={() => { anonymous = !anonymous; console.log(anonymous) }}>匿名评论</Checkbox>
+
       <Button className='submit-btn' onClick={submitComment}>提交</Button>
 
     </View>

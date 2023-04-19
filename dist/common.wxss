@@ -1,7 +1,7 @@
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/StarsScore/index.scss ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.container {
+.stars-score-container {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -11,13 +11,13 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.container .back {
+.stars-score-container .back {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
 }
-.container .front {
+.stars-score-container .front {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;

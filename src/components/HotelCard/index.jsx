@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './index.scss'
 import StarsScore from '../../components/StarsScore';
 
-// {/* This is a hotel card, component of hotel list page. */}
+// {/* 酒店卡片 */}
 export default function HotelCard({
     hotelDetails,
     onClick
