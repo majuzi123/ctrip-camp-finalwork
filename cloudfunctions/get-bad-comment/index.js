@@ -8,18 +8,21 @@ exports.main = async (data) => {
     if(data.index==2){
     var res = await db.collection('comment').orderBy('liveTime','desc').where({
         pass: true,
+        hotelId: data.hotelId,
         star: _.lte(2)
       }).get()
     }
     else if(data.index==1){
         var res = await db.collection('comment').orderBy('liveTime','desc').where({
             pass: true,
+            hotelId: data.hotelId,
             ImgList: _.neq([])
           }).get()
         }
     else{
         var res = await db.collection('comment').orderBy('liveTime','desc').where({
-            pass: true
+            pass: true,
+            hotelId: data.hotelId
           }).get()
     }
     // var arr = res.data
@@ -31,8 +34,8 @@ exports.main = async (data) => {
     // if (arr.length > data.num) {s
     //     return arr.slice(0, data.num)
     // }
-    if (res.length > 10) {
-        return res.slice(data.page*10, (data.page+1)*10-1)
+    if (res.data.length > 10) {
+        return res.data.slice(data.page*10, (data.page+1)*10)
     }
-    return res.data
+    return res.data.slice(data.page*10)
 }

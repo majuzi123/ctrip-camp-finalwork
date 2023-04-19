@@ -53,14 +53,15 @@ export default function Index() {
     title: hotelName
   })
   useLoad(async (options) => {
-    setAllcount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index: 0 } })).result.total)
-    setPhotocount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index: 1 } })).result.total)
-    setBadcount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index: 2 } })).result.total)
+    setAllcount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index: 0 ,hotelId:options.hotelId} })).result.total)
+    setPhotocount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index: 1,hotelId:options.hotelId } })).result.total)
+    setBadcount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index: 2 ,hotelId:options.hotelId} })).result.total)
     //console.log(allcount)
-    //console.log(options.hotelName)
+    
     setHotelName(options.hotelName)
     setHotelId(options.hotelId)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page, index: index } })).result
+    console.log(options.hotelId)
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page, index: index ,hotelId:options.hotelId} })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
@@ -69,7 +70,7 @@ export default function Index() {
   const appendComments = async () => {
     setLoading(true)
     console.log(index)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page + 1, index: index } })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page + 1, index: index ,hotelId:hotelId} })).result
     setPage(page + 1)
 
     console.log(comments)
@@ -77,24 +78,28 @@ export default function Index() {
     setLoading(false)
   }
   const onClickAll = async () => {
+    setPage(0)
     setIndex(0)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page, index: 0 } })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: 0, index: 0 ,hotelId:hotelId} })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
 
   }
   const onClickPhoto = async () => {
+    
+    setPage(0)
     setIndex(1)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page, index: 1 } })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: 0, index: 1,hotelId:hotelId } })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
 
   }
   const onClickBad = async () => {
+    setPage(0)
     setIndex(2)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page, index: 2 } })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: 0, index: 2 ,hotelId:hotelId} })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
