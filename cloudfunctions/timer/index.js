@@ -6,7 +6,7 @@ exports.main = async () => {
     const db = cloud.database({ env: 'cloud-3g1s9anved8781a2' })
 
     var res = ''
-    const collect = (await db.collection('hotel').get()).data
+    const collect = (await db.collection('hotel').orderBy('lastCntTime', "asc").get()).data
     let index = Math.floor(Math.random() * (collect.length - 5))
     const docs = collect.slice(index, index + 5)
     for (let doc of docs) {
