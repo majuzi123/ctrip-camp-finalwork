@@ -49,19 +49,20 @@ export default function Index() {
   const [allcount, setAllcount] = useState(0);
   const [photocount, setPhotocount] = useState(0);
   const [badcount, setBadcount] = useState(0);
+  const [scroll, setScroll] = useState(1)//滚动条高度，用于回到顶部
   Taro.setNavigationBarTitle({
     title: hotelName
   })
   useLoad(async (options) => {
-    setAllcount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index: 0 ,hotelId:options.hotelId} })).result.total)
-    setPhotocount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index: 1,hotelId:options.hotelId } })).result.total)
-    setBadcount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index: 2 ,hotelId:options.hotelId} })).result.total)
+    setAllcount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index: 0, hotelId: options.hotelId } })).result.total)
+    setPhotocount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index: 1, hotelId: options.hotelId } })).result.total)
+    setBadcount((await Taro.cloud.callFunction({ name: 'get-comment-list', data: { index: 2, hotelId: options.hotelId } })).result.total)
     //console.log(allcount)
-    
+
     setHotelName(options.hotelName)
     setHotelId(options.hotelId)
     console.log(options.hotelId)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page, index: index ,hotelId:options.hotelId} })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page, index: index, hotelId: options.hotelId } })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
@@ -70,7 +71,7 @@ export default function Index() {
   const appendComments = async () => {
     setLoading(true)
     console.log(index)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page + 1, index: index ,hotelId:hotelId} })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: page + 1, index: index, hotelId: hotelId } })).result
     setPage(page + 1)
 
     console.log(comments)
@@ -80,29 +81,32 @@ export default function Index() {
   const onClickAll = async () => {
     setPage(0)
     setIndex(0)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: 0, index: 0 ,hotelId:hotelId} })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: 0, index: 0, hotelId: hotelId } })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
+    setScroll((scroll + 1 - Math.random()) % 1)//回滚至顶部，state值发生改变才会触发
 
   }
   const onClickPhoto = async () => {
-    
+
     setPage(0)
     setIndex(1)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: 0, index: 1,hotelId:hotelId } })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: 0, index: 1, hotelId: hotelId } })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
+    setScroll((scroll + 1 - Math.random()) % 1)//回滚至顶部，state值发生改变才会触发
 
   }
   const onClickBad = async () => {
     setPage(0)
     setIndex(2)
-    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: 0, index: 2 ,hotelId:hotelId} })).result
+    const comments = (await Taro.cloud.callFunction({ name: 'get-bad-comment', data: { page: 0, index: 2, hotelId: hotelId } })).result
     console.log(comments)
     setCommentList(comments)
     setLoading(false)
+    setScroll((scroll + 1 - Math.random()) % 1)//回滚至顶部，state值发生改变才会触发
 
     //console.log(index)
   }
@@ -114,7 +118,7 @@ export default function Index() {
         <View onClick={() => onClickBad()} className={index == 2 ? 'shaixuan' : ''}>差评{badcount}</View>
         <View>筛选</View>
       </View>
-      <ScrollView className='hotel-cards' scrollY onScrollToLower={(appendComments)}>
+      <ScrollView className='hotel-cards' scrollY onScrollToLower={(appendComments)} scrollTop={scroll}>
         {Array.isArray(CommentsList) && CommentsList.map((item) => (
           <CommentListCard commentDetails={item} ></CommentListCard>
         ))}
