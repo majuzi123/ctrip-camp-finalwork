@@ -8,18 +8,21 @@ exports.main = async (data) => {
   if(data.index==2){
   var res = await db.collection('comment').orderBy('liveTime','desc').where({
       pass: true,
+      hotelId: data.hotelId,
       star: _.lte(2)
     }).count()
   }
   else if(data.index==1){
       var res = await db.collection('comment').orderBy('liveTime','desc').where({
           pass: true,
+          hotelId: data.hotelId,
           ImgList: _.neq([])
         }).count()
       }
   else{
       var res = await db.collection('comment').orderBy('liveTime','desc').where({
-          pass: true
+          pass: true,
+          hotelId: data.hotelId
         }).count()
   }
     // var arr = res.data
