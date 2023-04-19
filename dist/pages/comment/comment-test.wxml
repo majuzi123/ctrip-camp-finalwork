@@ -1,0 +1,28 @@
+<!--pages/comment/comment-test.wxml-->
+<!--导航条-->
+<view class="navbar">
+	<lable wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique"
+		bindtap="navbarTap">
+		<text>{{item}}</text>
+	</lable>
+</view>
+<view wx:for="{{commentlist}}" wx:key="unique" class="card">
+  <view>序号：{{index+1}}</view>
+  <view class ='userInfo'>
+    <image src ="{{item.userImg}}" class="touxiang"></image>
+    <div class="text">
+      <text class="nickname">{{item.nickname}}</text>
+      <text class="time">2023年4月入住|发布于{{item.location}}</text>
+    </div>
+  </view>
+  <view class="contentText">{{item.content}}</view>
+  <view class="container">
+  <div wx:for="{{item.ImgList}}" wx:for-item="imgs" class="pics">
+    <image src = "{{imgs}}" class="hotel"></image>
+</div>
+</view>
+  <view wx:if="{{!item.pass}}" class="button" >
+  <button type="primary" class="agree" bindtap="Pass" data-bzId="{{item._id}}">审核通过</button>
+  <button type="primary" class="disagree" bindtap="Refuse" data-bzId="{{item._id}}">拒绝</button>
+  </view>
+</view>
