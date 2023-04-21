@@ -1,0 +1,101 @@
+.hotal-list-page {
+<<<<<<< HEAD
+
+    .selector {
+        background-color: white;
+=======
+<<<<<<< HEAD
+
+    .selector {
+        background-color: white;
+=======
+    background-color: rgba($color: rgb(182, 176, 176), $alpha: 0.3);
+
+
+    .selector {
+        background-color: white;
+        box-shadow: 10rpx;
+>>>>>>> d26c1933 (管理员审核评论)
+>>>>>>> abf06872 (管理员评论审核)
+        position: sticky;
+        height: 60rpx;
+        display: flex;
+        font-size: 28rpx;
+        color: #333;
+
+        .filters {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+
+            .fliter {
+                height: 50rpx;
+                margin: 0 20rpx;
+                align-items: center;
+<<<<<<< HEAD
+                display: flex;
+                border-radius: 10rpx;
+                white-space: nowrap;
+=======
+<<<<<<< HEAD
+                display: flex;
+                border-radius: 10rpx;
+                white-space: nowrap;
+=======
+                border: 1rpx solid #ccc;
+                border-radius: 10rpx;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+>>>>>>> d26c1933 (管理员审核评论)
+>>>>>>> abf06872 (管理员评论审核)
+            }
+        }
+
+        .searcher {
+            width: 30%;
+            display: flex;
+            margin: 0 20rpx;
+
+            .search {
+                align-items: center;
+                border: 1rpx solid #ccc;
+                border-radius: 10rpx;
+            }
+        }
+    }
+
+    .hotel-cards {
+        width: auto;
+        height: calc(95vh);
+
+<<<<<<< HEAD
+        .tips {
+            position: relative;
+=======
+<<<<<<< HEAD
+        .tips {
+            position: relative;
+=======
+        .loading {
+>>>>>>> d26c1933 (管理员审核评论)
+>>>>>>> abf06872 (管理员评论审核)
+            color: rgb(209, 146, 156);
+            font-weight: bold;
+            align-items: center;
+            text-align: center;
+            height: 50rpx;
+            width: 100%;
+            font-size: 40rpx;
+            margin-bottom: 20rpx;
+<<<<<<< HEAD
+            visibility: hidden;
+=======
+<<<<<<< HEAD
+            visibility: hidden;
+=======
+>>>>>>> d26c1933 (管理员审核评论)
+>>>>>>> abf06872 (管理员评论审核)
+        }
+    }
+}

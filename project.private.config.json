@@ -1,0 +1,34 @@
+{
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> abf06872 (管理员评论审核)
+  "projectname": "xiecheng-final-work",
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": false
+<<<<<<< HEAD
+=======
+=======
+  "projectname": "ctrip-camp-finalwork-master",
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": false
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/comment-review/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+>>>>>>> d26c1933 (管理员审核评论)
+>>>>>>> abf06872 (管理员评论审核)
+  }
+}

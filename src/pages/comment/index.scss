@@ -1,0 +1,70 @@
+.wrapper {
+  background-color: #eee;
+  .tabbar {
+    display: flex;
+    background-color: #fff;
+
+    .tabbar-item {
+      text-align: center;
+      flex: 1;
+      line-height: 80rpx;
+    }
+    .active {
+      border-bottom: 4rpx solid #007acc;
+    }
+  }
+
+  .list {
+    padding: 20rpx;
+    .item {
+      background-color: #fff;
+      margin-bottom: 20rpx;
+      padding: 20rpx;
+      border-radius: 20rpx;
+      .info {
+        margin-top: 10rpx;
+        margin-bottom: 10rpx;
+        .head {
+          width: 120rpx;
+          height: 120rpx;
+          border-radius: 50%;
+        }
+
+        display: flex;
+        align-items: center;
+        .headinfo {
+          margin-left: 30rpx;
+
+          .timeorplace {
+            font-size: 30rpx;
+          }
+        }
+      }
+
+      .imglist {
+        margin-top: 5rpx;
+        display: flex;
+        flex-wrap: wrap;
+        image {
+          width: 215rpx;
+          height: 215rpx;
+          margin: 5rpx;
+        }
+      }
+    }
+
+    .func {
+      margin-top: 50rpx;
+      display: flex;
+      justify-content: space-around;
+      .Pass {
+        background-color: green;
+        color: #fff;
+      }
+      .Reject {
+        background-color: red;
+        color: #fff;
+      }
+    }
+  }
+}

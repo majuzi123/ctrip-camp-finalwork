@@ -1,0 +1,47 @@
+.hotal-list-page {
+    background-color: rgba($color: white, $alpha: 0.3);
+}
+.tiaozhuan{
+    position:fixed;
+   bottom:0;
+   width:730rpx;
+   //height:60px;   /* 底部高度 */
+   background:rgb(91,130,233);
+   margin-left: 15rpx;
+   border-radius: 10rpx;
+   color: #f7f4f4;
+   font-size: 35rpx;
+}
+.fenlei{
+    display: flex;
+  justify-content: space-around;
+
+}
+.hotel-cards {
+  width: auto;
+  height: calc(90vh);
+  margin-top: 40rpx;
+
+  .loading {
+      color: rgb(209, 146, 156);
+      font-weight: bold;
+      align-items: center;
+      text-align: center;
+      height: 50rpx;
+      width: 100%;
+      font-size: 40rpx;
+      margin-bottom: 20rpx;
+  }
+<<<<<<< HEAD
+}
+.shaixuan{
+  color: rgb(0, 89, 255);
+=======
+<<<<<<< HEAD
+}
+.shaixuan{
+  color: rgb(0, 89, 255);
+=======
+>>>>>>> d26c1933 (管理员审核评论)
+>>>>>>> abf06872 (管理员评论审核)
+}
