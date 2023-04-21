@@ -58,9 +58,10 @@ export default function ImageAdder({
                 </View>
             ))}
 
-            {cImgs.length < IMG_MAX_COUNT && <View className='img-container'>
+            {cImgs.length < IMG_MAX_COUNT && <View className='img-container adder-icon' onClick={addImg}>
                 {/* 触发添加图片的加号 */}
-                <Image src='https://pic.imgdb.cn/item/6434ffef0d2dde577737f3bf.jpg' className='comment-img' onClick={addImg} />
+                <IconFont name='tupian' color='rgb(211, 176, 243)' size='120rpx' />
+                点击添加图片
             </View>}
         </View>
     )

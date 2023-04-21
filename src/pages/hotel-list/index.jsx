@@ -4,6 +4,7 @@ import Taro, { useLoad } from '@tarojs/taro'
 import './index.scss'
 import HotelCard from '../../components/HotelCard';
 import IconFont from '../../components/iconfont';
+import LoadingDots from '../../components/LoadingDots';
 
 export default function Index() {
 
@@ -40,6 +41,7 @@ export default function Index() {
 
   //向数据库请求数据
   const getHotels = async () => {
+    document.getElementById('no-hotels').style.visibility = 'hidden'
     document.getElementById('loading').style.visibility = 'visible'
     let range = {//筛选条件
       minScore: parseFloat(tempRange[0]) ? parseFloat(tempRange[0]) : 0,//如果NaN，取默认值
@@ -57,6 +59,9 @@ export default function Index() {
     })).result
     console.log(hotels)
     document.getElementById('loading').style.visibility = 'hidden'
+    if (hotels.length === 0) {
+      document.getElementById('no-hotels').style.visibility = 'visible'
+    }
     return hotels
   }
 
@@ -90,11 +95,6 @@ export default function Index() {
   const refreshHotels = async () => {
     const result = await getHotels()
     setHotelList(result)
-    if (result.length == 0) {
-      document.getElementById('no-hotels').style.visibility = 'visible'
-    } else {
-      document.getElementById('no-hotels').style.visibility = 'hidden'
-    }
   }
 
   return (
@@ -113,12 +113,11 @@ export default function Index() {
       <ScrollView className='hotel-cards' scrollY onScrollToLower={(appendHotels)} scrollTop={scroll}>
         {Array.isArray(hotelsList) && hotelsList.map((item) => (
           <HotelCard hotelDetails={item} onClick={() => (Taro.navigateTo({
-            // url: '../comment-submit/index?hotelId=' + item._id + '&hotelName=' + item.name
             url: '../comment-list/index?hotelId=' + item._id + '&hotelName=' + item.name
           }))} />
         ))}
         {/* 加载时显示，其它时候隐藏 */}
-        <View className='tips' id='loading'>正在加载酒店数据...</View>
+        <View className='tips' id='loading'>正在加载酒店数据...<LoadingDots className='dots' /></View>
         {/* 无数据时显示，其它时候隐藏 */}
         <View className='tips' id='no-hotels'>没有符合条件的酒店T_T</View>
       </ScrollView>

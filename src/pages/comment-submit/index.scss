@@ -46,6 +46,24 @@
     }
 
     .submit-btn {
+        text-transform: uppercase;
+        letter-spacing: 2.5rpx;
+        font-weight: 500;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        border-radius: 45rpx;
+        box-shadow: 0 8rpx 15rpx rgba(0, 0, 0, 0.1);
+        outline: none;
+        transition: all 0.3s ease 0s;
         margin-bottom: 30rpx;
+    }
+
+
+    .submit-btn:active {
+        background-color: #23c483;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7rpx);
     }
 }
