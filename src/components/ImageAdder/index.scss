@@ -1,7 +1,7 @@
 .image-adder-container {
-    display: inline;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 30rpx;
-    width: 700rpx;
 
     .img-container {
         display: inline-block;

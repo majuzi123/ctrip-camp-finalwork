@@ -51,7 +51,7 @@ export default function ImageAdder({
         <View className='image-adder-container'>
             {cImgs.map((src, index) => (
                 <View className='img-container'>
-                    <Image src={src} className='comment-img'></Image>
+                    <Image src={src} className='comment-img' lazyLoad></Image>
                     <View className='delete-btn' onClick={() => { deleteImg(index) }}>
                         <IconFont name='times-circle-fill' size='32rpx' color='red'></IconFont>
                     </View>

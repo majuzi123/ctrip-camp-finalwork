@@ -363,7 +363,8 @@ function ImageAdder(_ref) {
           className: "img-container",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.Image, {
             src: src,
-            className: "comment-img"
+            className: "comment-img",
+            lazyLoad: true
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
             className: "delete-btn",
             onClick: function onClick() {
