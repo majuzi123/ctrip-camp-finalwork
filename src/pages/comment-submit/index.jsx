@@ -11,7 +11,7 @@ export default function Index() {
   const [cScore, setCScore] = useState(0);//评分
   const [cText, setCText] = useState('');//文字评论
   const [cImgs, setCImgs] = useState([]);//评论图片
-  let anonymous = false;//是否匿名提交点评
+  const [anonymous, setAnonymous] = useState(false);//是否匿名提交点评
 
   useLoad((options) => {
     console.log(options)
@@ -104,7 +104,7 @@ export default function Index() {
 
       <ImageAdder IMG_MAX_COUNT={9} uploadToCloud={true} imgsState={[cImgs, setCImgs]} />
 
-      <Checkbox className='anonymous-check' onClick={() => { anonymous = !anonymous; console.log(anonymous) }}>匿名评论</Checkbox>
+      <Checkbox className='anonymous-check' onClick={() => { setAnonymous(!anonymous) }} checked={anonymous}>匿名评论</Checkbox>
 
       <Button className='submit-btn' onClick={submitComment}>提交</Button>
 

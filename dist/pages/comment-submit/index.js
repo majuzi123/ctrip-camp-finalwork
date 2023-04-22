@@ -54,7 +54,10 @@ function Index() {
     _useState10 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_5__["default"])(_useState9, 2),
     cImgs = _useState10[0],
     setCImgs = _useState10[1]; //评论图片
-  var anonymous = false; //是否匿名提交点评
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState12 = (0,D_00000000000000000000000000000000_XieCheng_Learn_xiecheng_final_work_client_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_5__["default"])(_useState11, 2),
+    anonymous = _useState12[0],
+    setAnonymous = _useState12[1]; //是否匿名提交点评
 
   (0,_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__.useLoad)(function (options) {
     console.log(options);
@@ -215,9 +218,9 @@ function Index() {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.Checkbox, {
       className: "anonymous-check",
       onClick: function onClick() {
-        anonymous = !anonymous;
-        console.log(anonymous);
+        setAnonymous(!anonymous);
       },
+      checked: anonymous,
       children: "\u533F\u540D\u8BC4\u8BBA"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.Button, {
       className: "submit-btn",

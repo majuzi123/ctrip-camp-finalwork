@@ -64,7 +64,7 @@ export default function Index() {
           className="list-item"
           onClick={() => navigateHandle("/pages/hotel-list/index")}
         >
-          查看酒店列表 <IconFont name="quanxiangyou" />
+          <View className="button">查看酒店列表</View> <IconFont name="quanxiangyou" />
         </View>
         <View className="list-item">
           <Button open-type="feedback" class="button">
@@ -82,7 +82,7 @@ export default function Index() {
           className="list-item"
           onClick={() => navigateHandle("/pages/admin/index")}
         >
-          管理员登录 <IconFont name="quanxiangyou" />
+          <View className="button"> 管理员登录</View> <IconFont name="quanxiangyou" />
         </View>
       </View>
     </View>
