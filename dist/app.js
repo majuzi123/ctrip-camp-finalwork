@@ -4,6 +4,7 @@ require("./prebundle/vendors-node_modules_taro_weapp_prebundle_chunk-5P64A5DQ_js
 require("./prebundle/vendors-node_modules_taro_weapp_prebundle_chunk-JBC2HC5Z_js.js");
 require("./prebundle/vendors-node_modules_taro_weapp_prebundle_tarojs_plugin-framework-react_dist_runtime_js.js");
 require("./prebundle/vendors-node_modules_taro_weapp_prebundle_tarojs_taro_js.js");
+require("./prebundle/vendors-node_modules_taro_weapp_prebundle_dayjs_js.js");
 require("./prebundle/vendors-node_modules_taro_weapp_prebundle_chunk-LNJCN3VW_js.js");
 require("./prebundle/vendors-node_modules_taro_weapp_prebundle_tarojs_plugin-platform-weapp_dist_runtime_js.js");
 require("./prebundle/node_modules_taro_weapp_prebundle_tarojs_runtime_js.js");
@@ -104,7 +105,7 @@ var App = /*#__PURE__*/function (_Component) {
 
 
 
-var config = {"usingComponents":{"iconfont":"components/iconfont/weapp/weapp"},"pages":["pages/index/index","pages/comment-list/index","pages/hotel-list/index","pages/comment-submit/index","pages/comment-review/index"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"}};
+var config = {"usingComponents":{"iconfont":"components/iconfont/weapp/weapp"},"pages":["pages/index/index","pages/comment-list/index","pages/hotel-list/index","pages/comment-submit/index","pages/comment-review/index","pages/admin/index"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"}};
 _tarojs_runtime__WEBPACK_IMPORTED_MODULE_1__.window.__taroAppConfig = config
 var inst = App((0,_tarojs_plugin_framework_react_dist_runtime__WEBPACK_IMPORTED_MODULE_2__.createReactApp)(_node_modules_babel_loader_lib_index_js_ruleSet_1_rules_5_use_0_app_js__WEBPACK_IMPORTED_MODULE_4__["default"], react__WEBPACK_IMPORTED_MODULE_5__, (react_dom__WEBPACK_IMPORTED_MODULE_6___default()), config))
 

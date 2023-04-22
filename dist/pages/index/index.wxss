@@ -1,21 +1,66 @@
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/index/index.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.index-page {
-  width: 100%;
+.commit-review-page .login-box {
+  height: 400rpx;
+  background-color: #0387f2;
+  overflow: hidden;
+}
+.commit-review-page .login-box button {
+  width: 350rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  background-color: #1aac1a;
+  color: #fff;
+  margin-top: 150rpx;
+}
+.commit-review-page .login-box .headerorname {
+  text-align: center;
+  margin-top: 100rpx;
+  position: relative;
+}
+.commit-review-page .login-box .headerorname image {
+  border-radius: 50%;
+  width: 150rpx;
+  height: 150rpx;
+  display: inline-block;
+}
+.commit-review-page .login-box .headerorname view {
+  color: #fff;
+  margin-bottom: 20rpx;
+}
+.commit-review-page .login-box .headerorname .login_out {
+  color: white;
+  font-size: 38rpx;
+  margin-top: 20rpx;
+}
+.commit-review-page .list {
+  line-height: 90rpx;
+}
+.commit-review-page .list .list-item {
+  border-bottom: 1rpx solid #eee;
+  padding: 0 30rpx;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.index-page .nav-btn {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 40rpx;
+.commit-review-page .list .list-item image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.commit-review-page .list .list-item .button {
+  width: 100%;
+  background: white;
+  text-align: left;
+  font-size: 38rpx;
+  padding-left: 0;
+}
+.button::after {
+  border: none;
 }

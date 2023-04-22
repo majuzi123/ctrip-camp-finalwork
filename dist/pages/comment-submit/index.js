@@ -384,7 +384,7 @@ function ImageAdder(_ref) {
           name: "tupian",
           color: "rgb(211, 176, 243)",
           size: "120rpx"
-        }), "\u70B9\u51FB\u6DFB\u52A0\u56FE\u7247"]
+        }), "\u6DFB\u52A0\u56FE\u7247"]
       })]
     });
   }(IMG_MAX_COUNT);
