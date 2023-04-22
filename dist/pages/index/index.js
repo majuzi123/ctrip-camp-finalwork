@@ -104,7 +104,10 @@ function Index() {
         onClick: function onClick() {
           return navigateHandle("/pages/hotel-list/index");
         },
-        children: ["\u67E5\u770B\u9152\u5E97\u5217\u8868 ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_iconfont__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_5__.View, {
+          className: "button",
+          children: "\u67E5\u770B\u9152\u5E97\u5217\u8868"
+        }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_iconfont__WEBPACK_IMPORTED_MODULE_1__["default"], {
           name: "quanxiangyou"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_5__.View, {
@@ -130,7 +133,10 @@ function Index() {
         onClick: function onClick() {
           return navigateHandle("/pages/admin/index");
         },
-        children: ["\u7BA1\u7406\u5458\u767B\u5F55 ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_iconfont__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_5__.View, {
+          className: "button",
+          children: " \u7BA1\u7406\u5458\u767B\u5F55"
+        }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_iconfont__WEBPACK_IMPORTED_MODULE_1__["default"], {
           name: "quanxiangyou"
         })]
       })]

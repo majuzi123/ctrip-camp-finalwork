@@ -3,6 +3,7 @@
     height: 400rpx;
     background-color: #0387f2;
     overflow: hidden;
+
     button {
       width: 350rpx;
       line-height: 100rpx;
@@ -16,16 +17,19 @@
       text-align: center;
       margin-top: 100rpx;
       position: relative;
+
       image {
         border-radius: 50%;
         width: 150rpx;
         height: 150rpx;
         display: inline-block;
       }
+
       view {
         color: #fff;
         margin-bottom: 20rpx;
       }
+
       .login_out {
         color: white;
         font-size: 38rpx;
@@ -43,6 +47,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       image {
         width: 40rpx;
         height: 40rpx;
