@@ -5,10 +5,10 @@ import IconFont from '../iconfont';
 export default function ScoreChecker({
     starSize,
     fontSize,
-    scoreState,
+    score,
+    onChangeScore,
     title
 }) {
-    const [cScore, setCScore] = scoreState
     if (!starSize) {
         var starSize = '48rpx'
     }
@@ -17,8 +17,8 @@ export default function ScoreChecker({
         <View className='score-checker-container'>
             <Text className='score-title'>{title}</Text>
             <View className='stars'>{[1, 2, 3, 4, 5].map((value) => {
-                let colour = value <= cScore ? 'yellow' : "#ccc"
-                return (<View onClick={() => { setCScore(value) }} >
+                let colour = value <= score ? 'yellow' : "#ccc"
+                return (<View onClick={() => { onChangeScore(value) }} >
                     <IconFont className='star' name='a-1' color={colour} size={starSize} />
                 </View>)
             })}</View>

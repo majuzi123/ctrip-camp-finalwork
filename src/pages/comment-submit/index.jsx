@@ -38,6 +38,16 @@ export default function Index() {
     }
   })
 
+  //获取ScoreChecker组件状态的回调函数
+  const handleScoreChange = (score) => {
+    setCScore(score)
+  }
+
+  //获取ImageAdder组件状态的回调函数
+  const handleImgsChange = (imgs) => {
+    setCImgs(imgs)
+  }
+
   //点击提交点评后的操作
   const submitComment = async () => {
     console.log("clicked submit")
@@ -94,7 +104,7 @@ export default function Index() {
 
       <View className='hotel-name'>{hotelName}</View>
 
-      <ScoreChecker title={'评分：'} starSize={'60rpx'} scoreState={[cScore, setCScore]} />
+      <ScoreChecker title={'评分：'} starSize={'60rpx'} score={cScore} onChangeScore={handleScoreChange} />
 
       <View className='comment-text'>
         <Text className='text-tips1'>{cText == '' ? '欢迎你分享对酒店服务、环境、设施和价格等的评价...' : ''}</Text>
@@ -102,7 +112,7 @@ export default function Index() {
         <View className='text-tips2'>至少5个字</View>
       </View>
 
-      <ImageAdder IMG_MAX_COUNT={9} uploadToCloud={true} imgsState={[cImgs, setCImgs]} />
+      <ImageAdder IMG_MAX_COUNT={9} uploadToCloud={true} imgsList={cImgs} onChangeImgs={handleImgsChange} />
 
       <Checkbox className='anonymous-check' onClick={() => { setAnonymous(!anonymous) }} checked={anonymous}>匿名评论</Checkbox>
 
