@@ -11,7 +11,7 @@ exports.main = async () => {
     const docs = collect.slice(index, index + 10)
     for (let doc of docs) {
         let hid = doc._id
-        const commentCnt = await db.collection('comment').where({ hotelId: hid }).count()
+        const commentCnt = await db.collection('comment').where({ hotelId: hid, pass: true }).count()
         res += hid + ":" + commentCnt.total + "; "
         db.collection('hotel').doc(hid).update({
             data: {
