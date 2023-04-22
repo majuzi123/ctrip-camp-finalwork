@@ -14,7 +14,7 @@
 
 1. **扫描小程序码体验：**
 
-   ![小程序码](README_src\imgs\小程序码.jpg)
+   ![小程序码.jpg (430×430) (gitee.com)](https://gitee.com/eerk/ctrip-camp-finalwork/raw/master/README_src/imgs/小程序码.jpg)
 
 2. **开发环境运行：**
 

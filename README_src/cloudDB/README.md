@@ -2,7 +2,7 @@
 
 #### 存储记录数量分布：
 
-![数据库数据分布](..\imgs\数据库数据分布.png)
+![数据库数据分布.png (1540×413) (gitee.com)](https://gitee.com/eerk/ctrip-camp-finalwork/raw/master/README_src/imgs/数据库数据分布.png)
 
 #### 结构及字段含义：
 
