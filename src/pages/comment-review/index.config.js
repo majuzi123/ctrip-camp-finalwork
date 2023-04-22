@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: '点评审核'
+  navigationBarTitleText: '评论审核'
 })

@@ -10,7 +10,8 @@ export default defineAppConfig({
     'pages/comment-list/index',
     'pages/hotel-list/index',
     'pages/comment-submit/index',
-    'pages/comment-review/index'
+    'pages/comment-review/index',
+    'pages/admin/index'
   ],
   window: {
     backgroundTextStyle: 'light',

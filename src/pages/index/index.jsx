@@ -1,33 +1,90 @@
-import { useState } from 'react'
-import { View, Text, Button } from '@tarojs/components'
-import Taro, { useLoad } from '@tarojs/taro';
-import './index.scss'
+import { View, Text, Button, Image } from "@tarojs/components";
+import "./index.scss";
+import { navigateTo } from "@tarojs/taro";
+import Taro from "@tarojs/taro";
 import IconFont from '../../components/iconfont';
-export default function Index() {
+import { useEffect, useState } from "react";
 
-  useLoad(async () => {
-    const requestResult = await Taro.cloud.callFunction({
-      name: 'test'
-    })
-    const data = requestResult.result.data[0]
-    console.log(data)
-    if (data) {
-      console.log(data.content)//“成功连接到微信云数据库！”
-    } else {
-      console.log('云数据库连接失败！')
-    }
-  })
+export default function Index() {
+  const [userInfo, setUserInfo] = useState({});
+
+  const navigateHandle = (url) => {
+    navigateTo({ url });
+  };
+
+  const getProfileInfo = () => {
+    Taro.getUserProfile({
+      desc: "用于完善会员资料",
+    }).then((res) => {
+      const { nickName, avatarUrl } = res.userInfo;
+
+      setUserInfo(() => {
+        return { nickName, avatarUrl };
+      });
+
+      Taro.setStorage({ key: "userInfo", data: { nickName, avatarUrl } });
+    });
+  };
+
+  const loginout = () => {
+    setUserInfo({});
+    Taro.setStorage({ key: "userInfo", data: {} });
+  };
+
+  useEffect(() => {
+    Taro.getStorage({ key: "userInfo" })
+      .then((res) => {
+        if (res.data.nickName && res.data.avatarUrl) {
+          console.log(res.data);
+          setUserInfo(res.data);
+        }
+      })
+      .catch(() => { });
+  }, []);
 
   return (
-    <View className='index-page'>
-      <Button onClick={() => Taro.navigateTo({ url: '../hotel-list/index' })} className='nav-btn'>
-        我是用户，查看酒店和评论
-        <IconFont name='quanxiangyou' size='48rpx' />
-      </Button>
-      <Button onClick={() => Taro.navigateTo({ url: '../comment-review/index' })} className='nav-btn'>
-        我是管理员，前往审核评论
-        <IconFont name='touxiang1' size='48rpx' />
-      </Button>
+    <View className="commit-review-page">
+      <View className="login-box">
+        {!(userInfo.nickName && userInfo.avatarUrl) ? (
+          <Button onClick={getProfileInfo} class="login_in">
+            获取用户信息
+          </Button>
+        ) : (
+          <View className="headerorname">
+            <Image src={userInfo.avatarUrl} />
+            <View>{userInfo.nickName}</View>
+            <Text onClick={loginout} class="login_out">
+              退出登录
+            </Text>
+          </View>
+        )}
+      </View>
+      <View className="list">
+        <View
+          className="list-item"
+          onClick={() => navigateHandle("/pages/hotel-list/index")}
+        >
+          查看酒店列表 <IconFont name="quanxiangyou" />
+        </View>
+        <View className="list-item">
+          <Button open-type="feedback" class="button">
+            意见反馈
+          </Button>
+          <IconFont name="quanxiangyou" />
+        </View>
+        <View className="list-item">
+          <Button class="button" open-type="contact">
+            在线客服
+          </Button>
+          <IconFont name="quanxiangyou" />
+        </View>
+        <View
+          className="list-item"
+          onClick={() => navigateHandle("/pages/admin/index")}
+        >
+          管理员登录 <IconFont name="quanxiangyou" />
+        </View>
+      </View>
     </View>
-  )
+  );
 }

@@ -201,6 +201,9 @@
 /******/ 				"webpack/container/remote/@tarojs/plugin-framework-react/dist/runtime",
 /******/ 				"webpack/container/remote/react-dom"
 /******/ 			],
+/******/ 			"pages/comment-review/index": [
+/******/ 				"webpack/container/remote/dayjs"
+/******/ 			],
 /******/ 			"common": [
 /******/ 				"webpack/container/remote/@tarojs/runtime",
 /******/ 				"webpack/container/remote/@tarojs/taro",
@@ -222,6 +225,11 @@
 /******/ 			"webpack/container/remote/react-dom": [
 /******/ 				"default",
 /******/ 				"./react-dom",
+/******/ 				null
+/******/ 			],
+/******/ 			"webpack/container/remote/dayjs": [
+/******/ 				"default",
+/******/ 				"./dayjs",
 /******/ 				null
 /******/ 			],
 /******/ 			"webpack/container/remote/@tarojs/runtime": [
