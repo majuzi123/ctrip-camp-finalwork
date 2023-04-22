@@ -8,7 +8,7 @@ exports.main = async () => {
     var res = ''
     const collect = (await db.collection('hotel').orderBy('lastCntTime', "asc").get()).data
     let index = Math.floor(Math.random() * (collect.length - 5))
-    const docs = collect.slice(index, index + 5)
+    const docs = collect.slice(index, index + 10)
     for (let doc of docs) {
         let hid = doc._id
         const commentCnt = await db.collection('comment').where({ hotelId: hid }).count()
