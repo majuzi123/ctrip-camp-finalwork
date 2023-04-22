@@ -43,7 +43,29 @@
   margin: 30rpx;
 }
 .comment-submit-page .submit-btn {
+  text-transform: uppercase;
+  letter-spacing: 2.5rpx;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45rpx;
+  -webkit-box-shadow: 0 8rpx 15rpx rgba(0, 0, 0, 0.1);
+          box-shadow: 0 8rpx 15rpx rgba(0, 0, 0, 0.1);
+  outline: none;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   margin-bottom: 30rpx;
+}
+.comment-submit-page .submit-btn:active {
+  background-color: #23c483;
+  -webkit-box-shadow: 0rpx 15rpx 20rpx rgba(46, 229, 157, 0.4);
+          box-shadow: 0rpx 15rpx 20rpx rgba(46, 229, 157, 0.4);
+  color: #fff;
+  -webkit-transform: translateY(-7rpx);
+      -ms-transform: translateY(-7rpx);
+          transform: translateY(-7rpx);
 }
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/ScoreChecker/index.scss ***!
@@ -69,9 +91,9 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/components/ImageAdder/index.scss ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .image-adder-container {
-  display: inline;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 30rpx;
-  width: 700rpx;
 }
 .image-adder-container .img-container {
   display: inline-block;
@@ -79,16 +101,36 @@
   width: 180rpx;
   height: 180rpx;
   margin: 10rpx 10rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 16rpx;
+  overflow: hidden;
 }
 .image-adder-container .img-container .comment-img {
   width: 100%;
   height: 100%;
-  border: 2rpx solid #ddd;
-  border-radius: 16rpx;
-  overflow: hidden;
 }
 .image-adder-container .img-container .delete-btn {
   position: absolute;
   top: -10rpx;
   right: -20rpx;
+}
+.image-adder-container .adder-icon {
+  font-size: 30rpx;
+  font-weight: bolder;
+  color: rgb(211, 176, 243);
+  width: 170rpx;
+  height: 170rpx;
+  border: 10rpx solid rgb(235, 219, 251);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }

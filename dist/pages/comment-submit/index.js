@@ -363,7 +363,8 @@ function ImageAdder(_ref) {
           className: "img-container",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.Image, {
             src: src,
-            className: "comment-img"
+            className: "comment-img",
+            lazyLoad: true
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
             className: "delete-btn",
             onClick: function onClick() {
@@ -376,13 +377,14 @@ function ImageAdder(_ref) {
             })
           })]
         });
-      }), cImgs.length < IMG_MAX_COUNT && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
-        className: "img-container",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.Image, {
-          src: "https://pic.imgdb.cn/item/6434ffef0d2dde577737f3bf.jpg",
-          className: "comment-img",
-          onClick: addImg
-        })
+      }), cImgs.length < IMG_MAX_COUNT && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
+        className: "img-container adder-icon",
+        onClick: addImg,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_iconfont__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          name: "tupian",
+          color: "rgb(211, 176, 243)",
+          size: "120rpx"
+        }), "\u70B9\u51FB\u6DFB\u52A0\u56FE\u7247"]
       })]
     });
   }(IMG_MAX_COUNT);

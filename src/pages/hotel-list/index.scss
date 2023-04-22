@@ -1,10 +1,7 @@
 .hotal-list-page {
-    background-color: rgba($color: rgb(182, 176, 176), $alpha: 0.3);
-
 
     .selector {
         background-color: white;
-        box-shadow: 10rpx;
         position: sticky;
         height: 60rpx;
         display: flex;
@@ -20,11 +17,9 @@
                 height: 50rpx;
                 margin: 0 20rpx;
                 align-items: center;
-                border: 1rpx solid #ccc;
+                display: flex;
                 border-radius: 10rpx;
                 white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
             }
         }
 
@@ -46,6 +41,7 @@
         height: calc(95vh);
 
         .tips {
+            position: relative;
             color: rgb(209, 146, 156);
             font-weight: bold;
             align-items: center;

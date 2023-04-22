@@ -1,7 +1,7 @@
 .image-adder-container {
-    display: inline;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 30rpx;
-    width: 700rpx;
 
     .img-container {
         display: inline-block;
@@ -9,13 +9,13 @@
         width: 180rpx;
         height: 180rpx;
         margin: 10rpx 10rpx;
+        border: 2rpx solid #ddd;
+        border-radius: 16rpx;
+        overflow: hidden;
 
         .comment-img {
             width: 100%;
             height: 100%;
-            border: 2rpx solid #ddd;
-            border-radius: 16rpx;
-            overflow: hidden;
         }
 
         .delete-btn {
@@ -23,5 +23,18 @@
             top: -10rpx;
             right: -20rpx;
         }
+    }
+
+    .adder-icon {
+        font-size: 30rpx;
+        font-weight: bolder;
+        color: rgb(211, 176, 243);
+        width: 170rpx;
+        height: 170rpx;
+        border: 10rpx solid rgb(235, 219, 251);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
